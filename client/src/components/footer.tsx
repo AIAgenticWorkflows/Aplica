@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Linkedin, Twitter, Mail } from "lucide-react";
+import { Linkedin } from "lucide-react";
 import logoPath from "@assets/aplica-logo.png";
 
 export function Footer() {
@@ -16,12 +16,6 @@ export function Footer() {
             <div className="flex space-x-4">
               <a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">
                 <Linkedin className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">
-                <Mail className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -67,7 +61,7 @@ export function Footer() {
           </div>
         </div>
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-          <p>&copy; 2024 Aplica. All rights reserved. Building the future of AI-assisted decision making.</p>
+          <p>&copy; 2025 Aplica. All rights reserved. Building the future of AI-assisted decision making.</p>
         </div>
       </div>
     </footer>
