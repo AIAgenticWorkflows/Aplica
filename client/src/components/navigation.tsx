@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoPath from "@assets/aplica-logo.png";
+import logoPath from "@assets/aplica-full-logo.png";
 
 export function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -16,13 +16,12 @@ export function Navigation() {
   ];
 
   return (
-    <nav className="bg-white border-b border-gray-100 sticky top-0 z-50">
+    <nav className="bg-gray-50 border-b border-gray-200 sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
-        <div className="flex justify-between items-center h-24">
+        <div className="flex justify-between items-center h-28">
           <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-3 hover:opacity-70 transition-all duration-300 hover:scale-105">
-              <img src={logoPath} alt="Aplica" className="h-16 w-auto" />
-              <span className="text-2xl font-normal text-black tracking-normal">aplica</span>
+            <Link href="/" className="flex items-center hover:opacity-70 transition-all duration-300 hover:scale-105">
+              <img src={logoPath} alt="Aplica" className="h-20 w-auto" />
             </Link>
           </div>
           
@@ -56,7 +55,7 @@ export function Navigation() {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-white border-t border-gray-100">
+          <div className="md:hidden bg-gray-50 border-t border-gray-200">
             <div className="px-4 py-2 space-y-2">
               {navItems.map((item) => (
                 <Link
