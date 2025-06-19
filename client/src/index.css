@@ -86,12 +86,14 @@
   .minimal-card {
     background: white;
     border: 1px solid hsl(0, 0%, 92%);
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform: translateY(0);
   }
   
   .minimal-card:hover {
     border-color: hsl(0, 0%, 85%);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transform: translateY(-4px);
   }
   
   .hero-grid {
@@ -99,6 +101,12 @@
       linear-gradient(to right, hsl(0, 0%, 96%) 1px, transparent 1px),
       linear-gradient(to bottom, hsl(0, 0%, 96%) 1px, transparent 1px);
     background-size: 40px 40px;
+    animation: grid-float 20s ease-in-out infinite;
+  }
+  
+  @keyframes grid-float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
   }
   
   .section-padding {
@@ -108,6 +116,71 @@
   
   .text-balance {
     text-wrap: balance;
+  }
+  
+  .animate-fade-up {
+    animation: fade-up 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  
+  .animate-slide-in-left {
+    animation: slide-in-left 0.6s ease-out forwards;
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  
+  .animate-slide-in-right {
+    animation: slide-in-right 0.6s ease-out forwards;
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  
+  .animate-scale-in {
+    animation: scale-in 0.5s ease-out forwards;
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  
+  @keyframes fade-up {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slide-in-left {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slide-in-right {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes scale-in {
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .parallax-bg {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+  
+  .smooth-bounce {
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .smooth-bounce:hover {
+    transform: scale(1.05);
   }
   
   .logo-blue { color: hsl(210, 100%, 50%); }

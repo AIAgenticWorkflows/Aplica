@@ -7,29 +7,33 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative py-32 lg:py-40">
-        <div className="absolute inset-0 hero-grid opacity-50"></div>
+      <section className="relative py-32 lg:py-40 overflow-hidden">
+        <div className="absolute inset-0 hero-grid opacity-50 parallax-bg"></div>
         <div className="max-w-6xl mx-auto px-6 lg:px-8 text-center relative">
-          <FadeIn>
+          <FadeIn direction="scale" delay={0.2}>
             <h1 className="text-5xl lg:text-7xl font-light text-black mb-8 leading-tight text-balance">
               AI-Powered Tools for{" "}
               <span className="gradient-text font-medium">
                 Everyday Decisions
               </span>
             </h1>
+          </FadeIn>
+          <FadeIn delay={0.4}>
             <p className="text-xl lg:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
               We design thoughtful AI tools that make decisions easier and smarter. 
               Starting with short term rentals, travel, and services—building lean, 
               experimenting fast, and solving problems that matter.
             </p>
+          </FadeIn>
+          <FadeIn delay={0.6} direction="up">
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/work">
-                <Button size="lg" className="px-8 py-4 text-base font-medium bg-black text-white hover:bg-gray-800 transition-colors duration-200 rounded-full">
+                <Button size="lg" className="px-8 py-4 text-base font-medium bg-black text-white hover:bg-gray-800 transition-all duration-300 rounded-full smooth-bounce">
                   See What We're Building
                 </Button>
               </Link>
               <Link href="/collaborate">
-                <Button variant="outline" size="lg" className="px-8 py-4 text-base font-medium border border-gray-300 text-black hover:bg-gray-50 transition-colors duration-200 rounded-full">
+                <Button variant="outline" size="lg" className="px-8 py-4 text-base font-medium border border-gray-300 text-black hover:bg-gray-50 transition-all duration-300 rounded-full smooth-bounce">
                   Start a Conversation
                 </Button>
               </Link>

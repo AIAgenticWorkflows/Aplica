@@ -111,9 +111,9 @@ export default function Collaborate() {
 
         {/* Collaboration Types */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <FadeIn delay={0.1}>
-            <div className="minimal-card rounded-2xl p-8 text-center">
-              <div className="w-12 h-12 bg-black rounded-xl flex items-center justify-center mx-auto mb-6">
+          <FadeIn delay={0.1} direction="scale">
+            <div className="minimal-card rounded-2xl p-8 text-center group">
+              <div className="w-12 h-12 bg-black rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:rotate-6 transition-transform duration-300">
                 <Users className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-xl font-medium text-black mb-4">Partners</h3>
@@ -123,9 +123,9 @@ export default function Collaborate() {
             </div>
           </FadeIn>
 
-          <FadeIn delay={0.2}>
-            <div className="minimal-card rounded-2xl p-8 text-center">
-              <div className="w-12 h-12 bg-black rounded-xl flex items-center justify-center mx-auto mb-6">
+          <FadeIn delay={0.2} direction="scale">
+            <div className="minimal-card rounded-2xl p-8 text-center group">
+              <div className="w-12 h-12 bg-black rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:rotate-6 transition-transform duration-300">
                 <FlaskRound className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-xl font-medium text-black mb-4">Early Testers</h3>
@@ -135,9 +135,9 @@ export default function Collaborate() {
             </div>
           </FadeIn>
 
-          <FadeIn delay={0.3}>
-            <div className="minimal-card rounded-2xl p-8 text-center">
-              <div className="w-12 h-12 bg-black rounded-xl flex items-center justify-center mx-auto mb-6">
+          <FadeIn delay={0.3} direction="scale">
+            <div className="minimal-card rounded-2xl p-8 text-center group">
+              <div className="w-12 h-12 bg-black rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:rotate-6 transition-transform duration-300">
                 <Lightbulb className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-xl font-medium text-black mb-4">Idea Contributors</h3>

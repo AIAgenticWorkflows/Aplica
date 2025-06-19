@@ -19,15 +19,17 @@ export default function Work() {
 
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
           {/* Short Term Rental Tools */}
-          <FadeIn delay={0.1}>
-            <div className="minimal-card rounded-2xl p-8">
-              <img 
-                src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" 
-                alt="Modern short term rental property" 
-                className="w-full h-48 object-cover rounded-xl mb-6"
-              />
+          <FadeIn delay={0.1} direction="left">
+            <div className="minimal-card rounded-2xl p-8 group">
+              <div className="overflow-hidden rounded-xl mb-6">
+                <img 
+                  src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" 
+                  alt="Modern short term rental property" 
+                  className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
               <div className="flex items-center mb-4">
-                <div className="w-10 h-10 bg-black rounded-lg flex items-center justify-center mr-4">
+                <div className="w-10 h-10 bg-black rounded-lg flex items-center justify-center mr-4 group-hover:rotate-12 transition-transform duration-300">
                   <Home className="w-5 h-5 text-white" />
                 </div>
                 <h3 className="text-2xl font-medium text-black">Short Term Rental Intelligence</h3>
@@ -36,9 +38,9 @@ export default function Work() {
                 AI-powered tools for short term rental hosts to optimize pricing, manage bookings, automate guest communication, and maximize revenue while maintaining exceptional guest experiences.
               </p>
               <div className="flex flex-wrap gap-2 mb-6">
-                <Badge variant="secondary" className="bg-gray-100 text-gray-700 hover:bg-gray-200 px-3 py-1 rounded-full text-sm">Dynamic Pricing</Badge>
-                <Badge variant="secondary" className="bg-gray-100 text-gray-700 hover:bg-gray-200 px-3 py-1 rounded-full text-sm">Guest Automation</Badge>
-                <Badge variant="secondary" className="bg-gray-100 text-gray-700 hover:bg-gray-200 px-3 py-1 rounded-full text-sm">Revenue Optimization</Badge>
+                <Badge variant="secondary" className="bg-gray-100 text-gray-700 hover:bg-gray-200 px-3 py-1 rounded-full text-sm transition-all duration-200 hover:scale-105">Dynamic Pricing</Badge>
+                <Badge variant="secondary" className="bg-gray-100 text-gray-700 hover:bg-gray-200 px-3 py-1 rounded-full text-sm transition-all duration-200 hover:scale-105">Guest Automation</Badge>
+                <Badge variant="secondary" className="bg-gray-100 text-gray-700 hover:bg-gray-200 px-3 py-1 rounded-full text-sm transition-all duration-200 hover:scale-105">Revenue Optimization</Badge>
               </div>
               <div className="text-sm text-gray-500">
                 <strong className="text-black">Status:</strong> Early Prototype • <strong className="text-black">Launch:</strong> Q2 2025
@@ -47,15 +49,17 @@ export default function Work() {
           </FadeIn>
 
           {/* Travel Planning */}
-          <FadeIn delay={0.2}>
-            <div className="minimal-card rounded-2xl p-8">
-              <img 
-                src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" 
-                alt="Mountain hiking trail for travel planning" 
-                className="w-full h-48 object-cover rounded-xl mb-6"
-              />
+          <FadeIn delay={0.2} direction="right">
+            <div className="minimal-card rounded-2xl p-8 group">
+              <div className="overflow-hidden rounded-xl mb-6">
+                <img 
+                  src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" 
+                  alt="Mountain hiking trail for travel planning" 
+                  className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
               <div className="flex items-center mb-4">
-                <div className="w-10 h-10 bg-black rounded-lg flex items-center justify-center mr-4">
+                <div className="w-10 h-10 bg-black rounded-lg flex items-center justify-center mr-4 group-hover:rotate-12 transition-transform duration-300">
                   <MapPin className="w-5 h-5 text-white" />
                 </div>
                 <h3 className="text-2xl font-medium text-black">Intelligent Travel Planner</h3>
@@ -64,9 +68,9 @@ export default function Work() {
                 AI-powered travel planning that considers your interests, budget, weather, local events, and real-time conditions to create personalized itineraries.
               </p>
               <div className="flex flex-wrap gap-2 mb-6">
-                <Badge variant="secondary" className="bg-gray-100 text-gray-700 hover:bg-gray-200 px-3 py-1 rounded-full text-sm">Route Optimization</Badge>
-                <Badge variant="secondary" className="bg-gray-100 text-gray-700 hover:bg-gray-200 px-3 py-1 rounded-full text-sm">Local Insights</Badge>
-                <Badge variant="secondary" className="bg-gray-100 text-gray-700 hover:bg-gray-200 px-3 py-1 rounded-full text-sm">Dynamic Planning</Badge>
+                <Badge variant="secondary" className="bg-gray-100 text-gray-700 hover:bg-gray-200 px-3 py-1 rounded-full text-sm transition-all duration-200 hover:scale-105">Route Optimization</Badge>
+                <Badge variant="secondary" className="bg-gray-100 text-gray-700 hover:bg-gray-200 px-3 py-1 rounded-full text-sm transition-all duration-200 hover:scale-105">Local Insights</Badge>
+                <Badge variant="secondary" className="bg-gray-100 text-gray-700 hover:bg-gray-200 px-3 py-1 rounded-full text-sm transition-all duration-200 hover:scale-105">Dynamic Planning</Badge>
               </div>
               <div className="text-sm text-gray-500">
                 <strong className="text-black">Status:</strong> Concept Development • <strong className="text-black">Launch:</strong> Q2 2026
@@ -75,15 +79,17 @@ export default function Work() {
           </FadeIn>
 
           {/* Service Recommendations */}
-          <FadeIn delay={0.3}>
-            <div className="minimal-card rounded-2xl p-8">
-              <img 
-                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" 
-                alt="Professional service consultation" 
-                className="w-full h-48 object-cover rounded-xl mb-6"
-              />
+          <FadeIn delay={0.3} direction="left">
+            <div className="minimal-card rounded-2xl p-8 group">
+              <div className="overflow-hidden rounded-xl mb-6">
+                <img 
+                  src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" 
+                  alt="Professional service consultation" 
+                  className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
               <div className="flex items-center mb-4">
-                <div className="w-10 h-10 bg-black rounded-lg flex items-center justify-center mr-4">
+                <div className="w-10 h-10 bg-black rounded-lg flex items-center justify-center mr-4 group-hover:rotate-12 transition-transform duration-300">
                   <Users className="w-5 h-5 text-white" />
                 </div>
                 <h3 className="text-2xl font-medium text-black">Service Matchmaker</h3>
@@ -92,9 +98,9 @@ export default function Work() {
                 Connect with the right professionals and services based on your specific needs, location, budget, and quality requirements.
               </p>
               <div className="flex flex-wrap gap-2 mb-6">
-                <Badge variant="secondary" className="bg-gray-100 text-gray-700 hover:bg-gray-200 px-3 py-1 rounded-full text-sm">Professional Matching</Badge>
-                <Badge variant="secondary" className="bg-gray-100 text-gray-700 hover:bg-gray-200 px-3 py-1 rounded-full text-sm">Quality Scoring</Badge>
-                <Badge variant="secondary" className="bg-gray-100 text-gray-700 hover:bg-gray-200 px-3 py-1 rounded-full text-sm">Availability Sync</Badge>
+                <Badge variant="secondary" className="bg-gray-100 text-gray-700 hover:bg-gray-200 px-3 py-1 rounded-full text-sm transition-all duration-200 hover:scale-105">Professional Matching</Badge>
+                <Badge variant="secondary" className="bg-gray-100 text-gray-700 hover:bg-gray-200 px-3 py-1 rounded-full text-sm transition-all duration-200 hover:scale-105">Quality Scoring</Badge>
+                <Badge variant="secondary" className="bg-gray-100 text-gray-700 hover:bg-gray-200 px-3 py-1 rounded-full text-sm transition-all duration-200 hover:scale-105">Availability Sync</Badge>
               </div>
               <div className="text-sm text-gray-500">
                 <strong className="text-black">Status:</strong> Early Testing • <strong className="text-black">Launch:</strong> Q4 2025

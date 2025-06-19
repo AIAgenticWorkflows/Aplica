@@ -20,7 +20,7 @@ export function Navigation() {
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <Link href="/" className="flex items-center hover:opacity-70 transition-opacity duration-200">
+            <Link href="/" className="flex items-center hover:opacity-70 transition-all duration-300 hover:scale-105">
               <img src={logoPath} alt="Aplica" className="h-8 w-auto" />
             </Link>
           </div>
@@ -31,7 +31,7 @@ export function Navigation() {
               <Link
                 key={item.path}
                 href={item.path}
-                className={`text-sm font-medium transition-colors duration-200 ${
+                className={`text-sm font-medium transition-all duration-300 hover:scale-105 ${
                   location === item.path
                     ? "text-black"
                     : "text-gray-600 hover:text-black"
