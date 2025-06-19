@@ -5,7 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
-import { ParallaxOrb } from "@/components/parallax-orb";
+// import { ParallaxOrb } from "@/components/parallax-orb";
 import Home from "@/pages/home";
 import Work from "@/pages/work";
 import About from "@/pages/about";
@@ -29,7 +29,6 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <div className="min-h-screen bg-white relative">
-          <ParallaxOrb />
           <div className="relative z-10">
             <Navigation />
             <main>
