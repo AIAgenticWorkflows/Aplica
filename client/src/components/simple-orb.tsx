@@ -16,7 +16,7 @@ export function SimpleOrb() {
   const missionOrbScale = useTransform(scrollYProgress, [0.25, 0.4, 0.55], [0.5, 2, 1.5]);
 
   return (
-    <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-10 overflow-hidden">
+    <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-30 overflow-hidden">
       {/* Main animated orb */}
       <motion.div
         className="absolute top-20 right-20 w-40 h-40 bg-gradient-to-br from-purple-400 via-pink-300 to-orange-300 rounded-full blur-2xl opacity-60"
@@ -54,7 +54,7 @@ export function SimpleOrb() {
           opacity: missionOrbOpacity,
           scale: missionOrbScale,
         }}
-        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0"
+        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
       >
         {/* Purple/Pink/Orange gradient */}
         <motion.div
