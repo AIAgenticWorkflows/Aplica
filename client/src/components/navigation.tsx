@@ -22,7 +22,7 @@ export function Navigation() {
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-3 hover:opacity-70 transition-all duration-300 hover:scale-105">
               <img src={logoPath} alt="Aplica" className="h-16 w-auto" />
-              <span className="text-2xl font-light text-black tracking-wide">Aplica</span>
+              <span className="text-2xl font-normal text-black tracking-normal">aplica</span>
             </Link>
           </div>
           
