@@ -113,8 +113,8 @@ export default function Collaborate() {
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <FadeIn delay={0.1}>
             <div className="bg-white rounded-xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Users className="w-8 h-8 text-primary" />
+              <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Users className="w-8 h-8 logo-blue" />
               </div>
               <h3 className="text-xl font-semibold text-slate-800 mb-4">Partners</h3>
               <p className="text-secondary">
@@ -125,8 +125,8 @@ export default function Collaborate() {
 
           <FadeIn delay={0.2}>
             <div className="bg-white rounded-xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <FlaskRound className="w-8 h-8 text-accent" />
+              <div className="w-16 h-16 bg-yellow-50 rounded-full flex items-center justify-center mx-auto mb-6">
+                <FlaskRound className="w-8 h-8 logo-yellow" />
               </div>
               <h3 className="text-xl font-semibold text-slate-800 mb-4">Early Testers</h3>
               <p className="text-secondary">
@@ -137,8 +137,8 @@ export default function Collaborate() {
 
           <FadeIn delay={0.3}>
             <div className="bg-white rounded-xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Lightbulb className="w-8 h-8 text-primary" />
+              <div className="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Lightbulb className="w-8 h-8 logo-coral" />
               </div>
               <h3 className="text-xl font-semibold text-slate-800 mb-4">Idea Contributors</h3>
               <p className="text-secondary">
@@ -287,21 +287,21 @@ export default function Collaborate() {
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <a
                   href="mailto:hello@aplica.ai"
-                  className="flex items-center justify-center bg-white hover:bg-gray-50 border-2 border-gray-200 hover:border-primary text-slate-800 px-6 py-3 rounded-lg transition-all duration-300"
+                  className="flex items-center justify-center bg-white hover:bg-blue-50 border-2 border-gray-200 hover:border-blue-500 text-slate-800 px-6 py-3 rounded-lg transition-all duration-300"
                 >
                   <Mail className="w-5 h-5 mr-3" />
                   hello@aplica.ai
                 </a>
                 <a
                   href="https://linkedin.com/company/aplica"
-                  className="flex items-center justify-center bg-white hover:bg-gray-50 border-2 border-gray-200 hover:border-primary text-slate-800 px-6 py-3 rounded-lg transition-all duration-300"
+                  className="flex items-center justify-center bg-white hover:bg-blue-50 border-2 border-gray-200 hover:border-blue-500 text-slate-800 px-6 py-3 rounded-lg transition-all duration-300"
                 >
                   <Linkedin className="w-5 h-5 mr-3" />
                   LinkedIn
                 </a>
                 <a
                   href="https://twitter.com/aplica_ai"
-                  className="flex items-center justify-center bg-white hover:bg-gray-50 border-2 border-gray-200 hover:border-primary text-slate-800 px-6 py-3 rounded-lg transition-all duration-300"
+                  className="flex items-center justify-center bg-white hover:bg-blue-50 border-2 border-gray-200 hover:border-blue-500 text-slate-800 px-6 py-3 rounded-lg transition-all duration-300"
                 >
                   <Twitter className="w-5 h-5 mr-3" />
                   Twitter

@@ -49,10 +49,10 @@ export default function About() {
           </FadeIn>
           <div className="space-y-8">
             <FadeIn delay={0.1}>
-              <div className="bg-white rounded-xl p-8 shadow-sm border-l-4 border-primary">
+              <div className="bg-white rounded-xl p-8 shadow-sm border-l-4 border-blue-500">
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
-                    <Zap className="w-6 h-6 text-primary" />
+                  <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mr-4">
+                    <Zap className="w-6 h-6 logo-blue" />
                   </div>
                   <h3 className="text-2xl font-semibold text-slate-800">Simplicity</h3>
                 </div>
@@ -65,10 +65,10 @@ export default function About() {
             </FadeIn>
 
             <FadeIn delay={0.2}>
-              <div className="bg-white rounded-xl p-8 shadow-sm border-l-4 border-accent">
+              <div className="bg-white rounded-xl p-8 shadow-sm border-l-4 border-yellow-500">
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mr-4">
-                    <Target className="w-6 h-6 text-accent" />
+                  <div className="w-12 h-12 bg-yellow-50 rounded-lg flex items-center justify-center mr-4">
+                    <Target className="w-6 h-6 logo-yellow" />
                   </div>
                   <h3 className="text-2xl font-semibold text-slate-800">Usefulness</h3>
                 </div>
@@ -81,10 +81,10 @@ export default function About() {
             </FadeIn>
 
             <FadeIn delay={0.3}>
-              <div className="bg-white rounded-xl p-8 shadow-sm border-l-4 border-primary">
+              <div className="bg-white rounded-xl p-8 shadow-sm border-l-4 border-red-500">
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
-                    <Compass className="w-6 h-6 text-primary" />
+                  <div className="w-12 h-12 bg-red-50 rounded-lg flex items-center justify-center mr-4">
+                    <Compass className="w-6 h-6 logo-coral" />
                   </div>
                   <h3 className="text-2xl font-semibold text-slate-800">Curiosity</h3>
                 </div>
@@ -97,10 +97,10 @@ export default function About() {
             </FadeIn>
 
             <FadeIn delay={0.4}>
-              <div className="bg-white rounded-xl p-8 shadow-sm border-l-4 border-accent">
+              <div className="bg-white rounded-xl p-8 shadow-sm border-l-4 border-green-500">
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mr-4">
-                    <ShieldCheck className="w-6 h-6 text-accent" />
+                  <div className="w-12 h-12 bg-green-50 rounded-lg flex items-center justify-center mr-4">
+                    <ShieldCheck className="w-6 h-6 logo-emerald" />
                   </div>
                   <h3 className="text-2xl font-semibold text-slate-800">Integrity</h3>
                 </div>
@@ -116,7 +116,9 @@ export default function About() {
 
         {/* Future Vision */}
         <FadeIn delay={0.5}>
-          <div className="bg-gradient-to-r from-primary/5 to-accent/5 rounded-2xl p-12 text-center">
+          <div className="relative rounded-2xl p-12 text-center overflow-hidden">
+            <div className="absolute inset-0 gradient-bg opacity-5"></div>
+            <div className="relative z-10">
             <h2 className="text-3xl font-bold text-slate-800 mb-6">Looking Forward</h2>
             <p className="text-xl text-secondary leading-relaxed mb-8">
               We're building more than tools—we're creating a new way for people to interact with AI 
@@ -128,6 +130,7 @@ export default function About() {
                 Join Our Journey
               </Button>
             </Link>
+            </div>
           </div>
         </FadeIn>
       </div>

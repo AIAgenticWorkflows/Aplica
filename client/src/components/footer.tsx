@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { Linkedin, Twitter, Mail } from "lucide-react";
+import logoPath from "@assets/Aplica2_1750342863758.jpg";
 
 export function Footer() {
   return (
@@ -7,7 +8,7 @@ export function Footer() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
-            <h3 className="text-2xl font-bold mb-4">Aplica</h3>
+            <img src={logoPath} alt="Aplica" className="h-12 w-auto mb-4" />
             <p className="text-gray-300 mb-4 leading-relaxed">
               Building AI-powered tools that make everyday decisions easier and smarter. 
               Thoughtful design, privacy-aware AI, and continuous learning.

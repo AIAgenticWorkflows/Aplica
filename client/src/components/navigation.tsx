@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoPath from "@assets/Aplica2_1750342863758.jpg";
 
 export function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -19,8 +20,8 @@ export function Navigation() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <Link href="/" className="text-2xl font-bold text-slate-800 hover:text-primary transition-colors duration-300">
-              Aplica
+            <Link href="/" className="flex items-center hover:opacity-80 transition-opacity duration-300">
+              <img src={logoPath} alt="Aplica" className="h-10 w-auto" />
             </Link>
           </div>
           
@@ -32,8 +33,8 @@ export function Navigation() {
                 href={item.path}
                 className={`transition-colors duration-300 font-medium ${
                   location === item.path
-                    ? "text-slate-800 font-semibold"
-                    : "text-secondary hover:text-slate-800"
+                    ? "text-blue-600 font-semibold"
+                    : "text-secondary hover:text-blue-600"
                 }`}
               >
                 {item.label}
@@ -60,7 +61,7 @@ export function Navigation() {
                 <Link
                   key={item.path}
                   href={item.path}
-                  className="block py-2 text-secondary hover:text-slate-800 transition-colors duration-300"
+                  className="block py-2 text-secondary hover:text-blue-600 transition-colors duration-300"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.label}

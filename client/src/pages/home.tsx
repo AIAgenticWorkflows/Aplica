@@ -13,7 +13,7 @@ export default function Home() {
           <FadeIn>
             <h1 className="text-5xl md:text-7xl font-bold text-slate-800 mb-8 leading-tight">
               AI-Powered Tools for{" "}
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              <span className="gradient-text">
                 Everyday Decisions
               </span>
             </h1>
@@ -47,7 +47,7 @@ export default function Home() {
               We're not here to chase trends. We build lean, experiment fast, and focus on solving problems that matter. 
               Our goal is to turn promising ideas into reliable tools—backed by thoughtful design, privacy-aware AI, and continuous learning.
             </p>
-            <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto"></div>
+            <div className="w-24 h-1 gradient-bg mx-auto rounded-full"></div>
           </FadeIn>
         </div>
       </section>
@@ -63,36 +63,36 @@ export default function Home() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <FadeIn delay={0.1}>
-              <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
-                  <Zap className="w-6 h-6 text-primary" />
+              <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border-l-4 border-blue-500">
+                <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-6">
+                  <Zap className="w-6 h-6 logo-blue" />
                 </div>
                 <h3 className="text-xl font-semibold text-slate-800 mb-3">Simplicity</h3>
                 <p className="text-secondary">Clear, intuitive tools that remove complexity from decision-making</p>
               </div>
             </FadeIn>
             <FadeIn delay={0.2}>
-              <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
-                <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-6">
-                  <Target className="w-6 h-6 text-accent" />
+              <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border-l-4 border-yellow-500">
+                <div className="w-12 h-12 bg-yellow-50 rounded-lg flex items-center justify-center mb-6">
+                  <Target className="w-6 h-6 logo-yellow" />
                 </div>
                 <h3 className="text-xl font-semibold text-slate-800 mb-3">Usefulness</h3>
                 <p className="text-secondary">Every feature serves a real purpose and adds genuine value</p>
               </div>
             </FadeIn>
             <FadeIn delay={0.3}>
-              <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
-                  <Compass className="w-6 h-6 text-primary" />
+              <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border-l-4 border-red-500">
+                <div className="w-12 h-12 bg-red-50 rounded-lg flex items-center justify-center mb-6">
+                  <Compass className="w-6 h-6 logo-coral" />
                 </div>
                 <h3 className="text-xl font-semibold text-slate-800 mb-3">Curiosity</h3>
                 <p className="text-secondary">Continuous learning and exploration of new possibilities</p>
               </div>
             </FadeIn>
             <FadeIn delay={0.4}>
-              <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
-                <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-6">
-                  <ShieldCheck className="w-6 h-6 text-accent" />
+              <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border-l-4 border-green-500">
+                <div className="w-12 h-12 bg-green-50 rounded-lg flex items-center justify-center mb-6">
+                  <ShieldCheck className="w-6 h-6 logo-emerald" />
                 </div>
                 <h3 className="text-xl font-semibold text-slate-800 mb-3">Integrity</h3>
                 <p className="text-secondary">Privacy-first AI and transparent, ethical practices</p>
