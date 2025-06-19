@@ -93,12 +93,12 @@ export default function Home() {
               </div>
             </FadeIn>
             <FadeIn delay={0.4}>
-              <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border-l-4 border-green-500">
-                <div className="w-12 h-12 bg-green-50 rounded-lg flex items-center justify-center mb-6">
-                  <ShieldCheck className="w-6 h-6 logo-emerald" />
+              <div className="floating-card bg-white/80 backdrop-blur-xl p-10 rounded-3xl shadow-xl border border-gray-100/50 group">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
+                  <ShieldCheck className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-slate-800 mb-3">Integrity</h3>
-                <p className="text-secondary">Privacy-first AI and transparent, ethical practices</p>
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">Integrity</h3>
+                <p className="text-gray-600 leading-relaxed">Privacy-first AI and transparent, ethical practices</p>
               </div>
             </FadeIn>
           </div>
