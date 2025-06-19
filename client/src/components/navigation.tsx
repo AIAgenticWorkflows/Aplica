@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoPath from "@assets/Aplica2_1750342863758.jpg";
+import logoPath from "@assets/aplica-logo.png";
 
 export function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -16,28 +16,31 @@ export function Navigation() {
   ];
 
   return (
-    <nav className="bg-white border-b border-gray-100 sticky top-0 z-50 backdrop-blur-sm">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+    <nav className="bg-white/80 backdrop-blur-xl border-b border-gray-100/50 sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
           <div className="flex items-center">
-            <Link href="/" className="flex items-center hover:opacity-80 transition-opacity duration-300">
-              <img src={logoPath} alt="Aplica" className="h-10 w-auto" />
+            <Link href="/" className="flex items-center hover:opacity-80 transition-all duration-300 transform hover:scale-105">
+              <img src={logoPath} alt="Aplica" className="h-12 w-auto" />
             </Link>
           </div>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-12">
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 href={item.path}
-                className={`transition-colors duration-300 font-medium ${
+                className={`relative py-2 text-sm font-medium transition-all duration-300 ${
                   location === item.path
-                    ? "text-blue-600 font-semibold"
-                    : "text-secondary hover:text-blue-600"
-                }`}
+                    ? "text-blue-600"
+                    : "text-gray-600 hover:text-blue-600"
+                } group`}
               >
                 {item.label}
+                <span className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-300 ${
+                  location === item.path ? "w-full" : "w-0 group-hover:w-full"
+                }`}></span>
               </Link>
             ))}
           </div>

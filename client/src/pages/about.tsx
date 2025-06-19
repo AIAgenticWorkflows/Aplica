@@ -5,23 +5,23 @@ import { Zap, Target, Compass, ShieldCheck } from "lucide-react";
 
 export default function About() {
   return (
-    <section className="py-24 min-h-screen">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+    <section className="py-32 min-h-screen bg-gradient-to-b from-white to-gray-50">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-20">
           <FadeIn>
-            <h1 className="text-5xl md:text-6xl font-bold text-slate-800 mb-8">About Aplica</h1>
-            <p className="text-xl text-secondary">
+            <h1 className="text-6xl md:text-7xl font-black text-slate-900 mb-12 tracking-tight">About Aplica</h1>
+            <p className="text-2xl text-gray-600 font-light">
               Building thoughtful AI tools with a global mindset and local impact
             </p>
           </FadeIn>
         </div>
 
         {/* Company Story */}
-        <div className="mb-16">
+        <div className="mb-20">
           <FadeIn>
-            <div className="bg-white rounded-2xl p-12 shadow-lg">
-              <h2 className="text-3xl font-bold text-slate-800 mb-8">Our Story</h2>
-              <div className="space-y-6 text-lg text-secondary leading-relaxed">
+            <div className="floating-card bg-white/90 backdrop-blur-xl rounded-3xl p-16 shadow-2xl border border-gray-100/50">
+              <h2 className="text-4xl font-black text-slate-900 mb-12 tracking-tight">Our Story</h2>
+              <div className="space-y-8 text-xl text-gray-600 leading-relaxed font-light">
                 <p>
                   Aplica was born from a simple observation: people make countless decisions every day, 
                   and technology should make those decisions easier, not harder. We're an early-stage company 
@@ -43,20 +43,20 @@ export default function About() {
         </div>
 
         {/* Core Values */}
-        <div className="mb-16">
+        <div className="mb-20">
           <FadeIn>
-            <h2 className="text-3xl font-bold text-slate-800 mb-12 text-center">Our Values</h2>
+            <h2 className="text-5xl font-black text-slate-900 mb-16 text-center tracking-tight">Our Values</h2>
           </FadeIn>
-          <div className="space-y-8">
+          <div className="space-y-10">
             <FadeIn delay={0.1}>
-              <div className="bg-white rounded-xl p-8 shadow-sm border-l-4 border-blue-500">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mr-4">
-                    <Zap className="w-6 h-6 logo-blue" />
+              <div className="floating-card bg-white/90 backdrop-blur-xl rounded-3xl p-12 shadow-xl border border-blue-100/50">
+                <div className="flex items-center mb-8">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mr-6">
+                    <Zap className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-semibold text-slate-800">Simplicity</h3>
+                  <h3 className="text-3xl font-bold text-slate-900">Simplicity</h3>
                 </div>
-                <p className="text-secondary leading-relaxed">
+                <p className="text-gray-600 leading-relaxed text-lg font-light">
                   We believe the best solutions are often the simplest ones. Our tools remove complexity 
                   from decision-making rather than adding it. Every interface, every feature, every interaction 
                   is designed to be intuitive and clear.

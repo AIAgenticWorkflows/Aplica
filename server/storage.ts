@@ -18,6 +18,7 @@ export class MemStorage implements IStorage {
     const id = this.currentId++;
     const request: CollaborationRequest = {
       ...insertRequest,
+      organization: insertRequest.organization || null,
       id,
       createdAt: new Date(),
     };
