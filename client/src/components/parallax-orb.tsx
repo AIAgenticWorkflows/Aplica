@@ -1,7 +1,14 @@
 import { useEffect, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useLocation } from "wouter";
 
 export function ParallaxOrb() {
+  const [location] = useLocation();
+  
+  // Only show on homepage
+  if (location !== "/") {
+    return null;
+  }
   const { scrollYProgress } = useScroll();
   
   // Hero section (0-0.25): Large colorful orb
@@ -16,6 +23,7 @@ export function ParallaxOrb() {
   // Values section (0.5-0.75): Four large orbs highlighting values
   const valuesDotsOpacity = useTransform(scrollYProgress, [0.45, 0.55, 0.7, 0.8], [0, 1, 1, 0]);
   const valuesDotsScale = useTransform(scrollYProgress, [0.5, 0.6, 0.75], [0.5, 1.2, 0.8]);
+  const valuesDotsY = useTransform(scrollYProgress, [0.5, 0.75], [50, 200]);
   
   // Footer section (0.75-1): Time display with subtle glow
   const timeOpacity = useTransform(scrollYProgress, [0.7, 0.8, 1], [0, 1, 1]);
