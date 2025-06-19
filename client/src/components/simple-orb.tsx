@@ -11,9 +11,9 @@ export function SimpleOrb() {
     return null;
   }
   
-  // Mission section highlight (around 30-60% of scroll for better visibility)
-  const missionOrbOpacity = useTransform(scrollYProgress, [0.25, 0.4, 0.55, 0.7], [0, 0.9, 0.9, 0]);
-  const missionOrbScale = useTransform(scrollYProgress, [0.25, 0.4, 0.55], [0.5, 2, 1.5]);
+  // Mission section highlight - expand right at mission start
+  const missionOrbOpacity = useTransform(scrollYProgress, [0.15, 0.25, 0.45, 0.55], [0, 0.9, 0.9, 0]);
+  const missionOrbScale = useTransform(scrollYProgress, [0.15, 0.25, 0.45], [0.3, 2.2, 1.8]);
 
   return (
     <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-30 overflow-hidden">
