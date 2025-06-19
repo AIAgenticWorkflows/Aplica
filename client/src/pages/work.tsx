@@ -18,8 +18,38 @@ export default function Work() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
-          {/* Short Term Rental Tools */}
+          {/* Service Matchmaker */}
           <FadeIn delay={0.1} direction="left">
+            <div className="minimal-card rounded-2xl p-8 group">
+              <div className="overflow-hidden rounded-xl mb-6">
+                <img 
+                  src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" 
+                  alt="Professional service consultation" 
+                  className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="flex items-center mb-4">
+                <div className="w-10 h-10 bg-black rounded-lg flex items-center justify-center mr-4 group-hover:rotate-12 transition-transform duration-300">
+                  <Users className="w-5 h-5 text-white" />
+                </div>
+                <h3 className="text-2xl font-medium text-black">Service Matchmaker</h3>
+              </div>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                Connect with the right professionals and services based on your specific needs, location, budget, and quality requirements.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-6">
+                <Badge variant="secondary" className="bg-gray-100 text-gray-700 hover:bg-gray-200 px-3 py-1 rounded-full text-sm transition-all duration-200 hover:scale-105">Professional Matching</Badge>
+                <Badge variant="secondary" className="bg-gray-100 text-gray-700 hover:bg-gray-200 px-3 py-1 rounded-full text-sm transition-all duration-200 hover:scale-105">Quality Scoring</Badge>
+                <Badge variant="secondary" className="bg-gray-100 text-gray-700 hover:bg-gray-200 px-3 py-1 rounded-full text-sm transition-all duration-200 hover:scale-105">Availability Sync</Badge>
+              </div>
+              <div className="text-sm text-gray-500">
+                <strong className="text-black">Status:</strong> Early Testing • <strong className="text-black">Launch:</strong> Q4 2025
+              </div>
+            </div>
+          </FadeIn>
+
+          {/* Short Term Rental Tools */}
+          <FadeIn delay={0.2} direction="right">
             <div className="minimal-card rounded-2xl p-8 group">
               <div className="overflow-hidden rounded-xl mb-6">
                 <img 
@@ -49,7 +79,7 @@ export default function Work() {
           </FadeIn>
 
           {/* Travel Planning */}
-          <FadeIn delay={0.2} direction="right">
+          <FadeIn delay={0.3} direction="left">
             <div className="minimal-card rounded-2xl p-8 group">
               <div className="overflow-hidden rounded-xl mb-6">
                 <img 
@@ -74,36 +104,6 @@ export default function Work() {
               </div>
               <div className="text-sm text-gray-500">
                 <strong className="text-black">Status:</strong> Concept Development • <strong className="text-black">Launch:</strong> Q2 2026
-              </div>
-            </div>
-          </FadeIn>
-
-          {/* Service Recommendations */}
-          <FadeIn delay={0.3} direction="left">
-            <div className="minimal-card rounded-2xl p-8 group">
-              <div className="overflow-hidden rounded-xl mb-6">
-                <img 
-                  src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" 
-                  alt="Professional service consultation" 
-                  className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div className="flex items-center mb-4">
-                <div className="w-10 h-10 bg-black rounded-lg flex items-center justify-center mr-4 group-hover:rotate-12 transition-transform duration-300">
-                  <Users className="w-5 h-5 text-white" />
-                </div>
-                <h3 className="text-2xl font-medium text-black">Service Matchmaker</h3>
-              </div>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                Connect with the right professionals and services based on your specific needs, location, budget, and quality requirements.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-6">
-                <Badge variant="secondary" className="bg-gray-100 text-gray-700 hover:bg-gray-200 px-3 py-1 rounded-full text-sm transition-all duration-200 hover:scale-105">Professional Matching</Badge>
-                <Badge variant="secondary" className="bg-gray-100 text-gray-700 hover:bg-gray-200 px-3 py-1 rounded-full text-sm transition-all duration-200 hover:scale-105">Quality Scoring</Badge>
-                <Badge variant="secondary" className="bg-gray-100 text-gray-700 hover:bg-gray-200 px-3 py-1 rounded-full text-sm transition-all duration-200 hover:scale-105">Availability Sync</Badge>
-              </div>
-              <div className="text-sm text-gray-500">
-                <strong className="text-black">Status:</strong> Early Testing • <strong className="text-black">Launch:</strong> Q4 2025
               </div>
             </div>
           </FadeIn>
