@@ -97,12 +97,12 @@ export default function Collaborate() {
   }
 
   return (
-    <section className="py-24 min-h-screen">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="section-padding">
+      <div className="max-w-4xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
           <FadeIn>
-            <h1 className="text-5xl md:text-6xl font-bold text-slate-800 mb-8">Let's Collaborate</h1>
-            <p className="text-xl text-secondary max-w-3xl mx-auto">
+            <h1 className="text-5xl lg:text-6xl font-light text-black mb-8 text-balance">Let's Collaborate</h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We believe the best products come from collaboration. Whether you're a potential partner, 
               early tester, or someone with ideas to share, we'd love to hear from you.
             </p>
@@ -112,36 +112,36 @@ export default function Collaborate() {
         {/* Collaboration Types */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <FadeIn delay={0.1}>
-            <div className="bg-white rounded-xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Users className="w-8 h-8 logo-blue" />
+            <div className="minimal-card rounded-2xl p-8 text-center">
+              <div className="w-12 h-12 bg-black rounded-xl flex items-center justify-center mx-auto mb-6">
+                <Users className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-slate-800 mb-4">Partners</h3>
-              <p className="text-secondary">
+              <h3 className="text-xl font-medium text-black mb-4">Partners</h3>
+              <p className="text-gray-600">
                 Business partners, technology collaborators, and strategic allies who want to build the future together
               </p>
             </div>
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <div className="bg-white rounded-xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="w-16 h-16 bg-yellow-50 rounded-full flex items-center justify-center mx-auto mb-6">
-                <FlaskRound className="w-8 h-8 logo-yellow" />
+            <div className="minimal-card rounded-2xl p-8 text-center">
+              <div className="w-12 h-12 bg-black rounded-xl flex items-center justify-center mx-auto mb-6">
+                <FlaskRound className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-slate-800 mb-4">Early Testers</h3>
-              <p className="text-secondary">
+              <h3 className="text-xl font-medium text-black mb-4">Early Testers</h3>
+              <p className="text-gray-600">
                 Individuals and organizations willing to test our prototypes and provide valuable feedback
               </p>
             </div>
           </FadeIn>
 
           <FadeIn delay={0.3}>
-            <div className="bg-white rounded-xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Lightbulb className="w-8 h-8 logo-coral" />
+            <div className="minimal-card rounded-2xl p-8 text-center">
+              <div className="w-12 h-12 bg-black rounded-xl flex items-center justify-center mx-auto mb-6">
+                <Lightbulb className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-slate-800 mb-4">Idea Contributors</h3>
-              <p className="text-secondary">
+              <h3 className="text-xl font-medium text-black mb-4">Idea Contributors</h3>
+              <p className="text-gray-600">
                 Creative thinkers with insights about AI applications and real-world problem solving
               </p>
             </div>

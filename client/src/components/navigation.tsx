@@ -16,31 +16,28 @@ export function Navigation() {
   ];
 
   return (
-    <nav className="bg-white/80 backdrop-blur-xl border-b border-gray-100/50 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+    <nav className="bg-white border-b border-gray-100 sticky top-0 z-50">
+      <div className="max-w-6xl mx-auto px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <Link href="/" className="flex items-center hover:opacity-80 transition-all duration-300 transform hover:scale-105">
-              <img src={logoPath} alt="Aplica" className="h-12 w-auto" />
+            <Link href="/" className="flex items-center hover:opacity-70 transition-opacity duration-200">
+              <img src={logoPath} alt="Aplica" className="h-8 w-auto" />
             </Link>
           </div>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-12">
+          <div className="hidden md:flex space-x-8">
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 href={item.path}
-                className={`relative py-2 text-sm font-medium transition-all duration-300 ${
+                className={`text-sm font-medium transition-colors duration-200 ${
                   location === item.path
-                    ? "text-blue-600"
-                    : "text-gray-600 hover:text-blue-600"
-                } group`}
+                    ? "text-black"
+                    : "text-gray-600 hover:text-black"
+                }`}
               >
                 {item.label}
-                <span className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-300 ${
-                  location === item.path ? "w-full" : "w-0 group-hover:w-full"
-                }`}></span>
               </Link>
             ))}
           </div>
@@ -64,7 +61,7 @@ export function Navigation() {
                 <Link
                   key={item.path}
                   href={item.path}
-                  className="block py-2 text-secondary hover:text-blue-600 transition-colors duration-300"
+                  className="block py-2 text-gray-600 hover:text-black transition-colors duration-200"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.label}

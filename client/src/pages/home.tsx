@@ -7,31 +7,29 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 hero-pattern"></div>
-        <div className="absolute inset-0 mesh-gradient"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <section className="relative py-32 lg:py-40">
+        <div className="absolute inset-0 hero-grid opacity-50"></div>
+        <div className="max-w-6xl mx-auto px-6 lg:px-8 text-center relative">
           <FadeIn>
-            <h1 className="text-6xl md:text-8xl font-black text-slate-900 mb-8 leading-[0.9] tracking-tight">
+            <h1 className="text-5xl lg:text-7xl font-light text-black mb-8 leading-tight text-balance">
               AI-Powered Tools for{" "}
-              <span className="gradient-text relative">
+              <span className="gradient-text font-medium">
                 Everyday Decisions
-                <div className="absolute -inset-2 bg-gradient-to-r from-blue-500/10 to-purple-500/10 blur-2xl rounded-3xl"></div>
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-16 max-w-4xl mx-auto leading-relaxed font-light">
+            <p className="text-xl lg:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
               We design thoughtful AI tools that make decisions easier and smarter. 
-              Starting with real estate, shopping, tourism, and services—building lean, 
+              Starting with short term rentals, travel, and services—building lean, 
               experimenting fast, and solving problems that matter.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/work">
-                <Button size="lg" className="px-10 py-6 text-lg font-semibold bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-2xl hover:shadow-blue-500/25 transform hover:scale-105 transition-all duration-300 rounded-2xl">
+                <Button size="lg" className="px-8 py-4 text-base font-medium bg-black text-white hover:bg-gray-800 transition-colors duration-200 rounded-full">
                   See What We're Building
                 </Button>
               </Link>
               <Link href="/collaborate">
-                <Button variant="outline" size="lg" className="px-10 py-6 text-lg font-semibold border-2 border-gray-300 text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition-all duration-300 rounded-2xl backdrop-blur-sm">
+                <Button variant="outline" size="lg" className="px-8 py-4 text-base font-medium border border-gray-300 text-black hover:bg-gray-50 transition-colors duration-200 rounded-full">
                   Start a Conversation
                 </Button>
               </Link>
@@ -41,15 +39,14 @@ export default function Home() {
       </section>
 
       {/* Mission Statement */}
-      <section className="py-32 bg-gradient-to-b from-white to-gray-50">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="section-padding bg-gray-50">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <FadeIn>
-            <h2 className="text-5xl md:text-6xl font-black text-slate-900 mb-12 tracking-tight">Our Mission</h2>
-            <p className="text-2xl text-gray-600 leading-relaxed mb-12 font-light max-w-4xl mx-auto">
+            <h2 className="text-4xl lg:text-5xl font-light text-black mb-8 text-balance">Our Mission</h2>
+            <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
               We're not here to chase trends. We build lean, experiment fast, and focus on solving problems that matter. 
               Our goal is to turn promising ideas into reliable tools—backed by thoughtful design, privacy-aware AI, and continuous learning.
             </p>
-            <div className="w-32 h-2 gradient-bg mx-auto rounded-full shadow-lg"></div>
           </FadeIn>
         </div>
       </section>

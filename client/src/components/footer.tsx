@@ -4,11 +4,11 @@ import logoPath from "@assets/aplica-logo.png";
 
 export function Footer() {
   return (
-    <footer className="bg-gradient-to-r from-slate-900 to-slate-800 text-white py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="bg-black text-white py-16">
+      <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
-            <img src={logoPath} alt="Aplica" className="h-16 w-auto mb-6" />
+            <img src={logoPath} alt="Aplica" className="h-12 w-auto mb-6" />
             <p className="text-gray-300 mb-4 leading-relaxed">
               Building AI-powered tools that make everyday decisions easier and smarter. 
               Thoughtful design, privacy-aware AI, and continuous learning.
