@@ -183,6 +183,16 @@
     transform: scale(1.05);
   }
   
+  .parallax-container {
+    perspective: 1000px;
+    overflow-x: hidden;
+  }
+  
+  .parallax-element {
+    transform-style: preserve-3d;
+    will-change: transform;
+  }
+  
   .logo-blue { color: hsl(210, 100%, 50%); }
   .logo-yellow { color: hsl(45, 100%, 55%); }
   .logo-coral { color: hsl(8, 85%, 60%); }

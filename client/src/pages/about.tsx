@@ -65,49 +65,46 @@ export default function About() {
             </FadeIn>
 
             <FadeIn delay={0.2}>
-              <div className="bg-white rounded-xl p-8 shadow-sm border-l-4 border-yellow-500">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-yellow-50 rounded-lg flex items-center justify-center mr-4">
-                    <Target className="w-6 h-6 logo-yellow" />
+              <div className="minimal-card rounded-2xl p-8">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-black rounded-xl flex items-center justify-center mr-4">
+                    <Target className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-2xl font-semibold text-slate-800">Usefulness</h3>
+                  <h3 className="text-2xl font-medium text-black">Usefulness</h3>
                 </div>
-                <p className="text-secondary leading-relaxed">
-                  Every feature we build must serve a real purpose and add genuine value. We don't chase 
-                  trends or add features for their own sake. If it doesn't make decisions easier or outcomes 
-                  better, it doesn't belong in our products.
+                <p className="text-gray-600 leading-relaxed">
+                  Every feature serves a real purpose and adds genuine value. We prioritize solving 
+                  real problems over building impressive technology for its own sake.
                 </p>
               </div>
             </FadeIn>
 
             <FadeIn delay={0.3}>
-              <div className="bg-white rounded-xl p-8 shadow-sm border-l-4 border-red-500">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-red-50 rounded-lg flex items-center justify-center mr-4">
-                    <Compass className="w-6 h-6 logo-coral" />
+              <div className="minimal-card rounded-2xl p-8">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-black rounded-xl flex items-center justify-center mr-4">
+                    <Compass className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-2xl font-semibold text-slate-800">Curiosity</h3>
+                  <h3 className="text-2xl font-medium text-black">Curiosity</h3>
                 </div>
-                <p className="text-secondary leading-relaxed">
-                  We're driven by continuous learning and exploration. The AI landscape is evolving rapidly, 
-                  and we stay curious about new possibilities while remaining grounded in practical applications 
-                  that solve real problems.
+                <p className="text-gray-600 leading-relaxed">
+                  We stay curious about new possibilities while staying grounded in practical applications. 
+                  Continuous learning drives our innovation.
                 </p>
               </div>
             </FadeIn>
 
             <FadeIn delay={0.4}>
-              <div className="bg-white rounded-xl p-8 shadow-sm border-l-4 border-green-500">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-green-50 rounded-lg flex items-center justify-center mr-4">
-                    <ShieldCheck className="w-6 h-6 logo-emerald" />
+              <div className="minimal-card rounded-2xl p-8">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-black rounded-xl flex items-center justify-center mr-4">
+                    <ShieldCheck className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-2xl font-semibold text-slate-800">Integrity</h3>
+                  <h3 className="text-2xl font-medium text-black">Integrity</h3>
                 </div>
-                <p className="text-secondary leading-relaxed">
-                  We build privacy-first AI with transparent, ethical practices. Our users' data and trust 
-                  are sacred. We're committed to responsible AI development that respects user privacy 
-                  and promotes beneficial outcomes for society.
+                <p className="text-gray-600 leading-relaxed">
+                  Privacy-first AI, transparent practices, and ethical considerations guide every decision. 
+                  We build tools that respect users and their data.
                 </p>
               </div>
             </FadeIn>
