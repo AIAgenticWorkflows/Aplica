@@ -6,9 +6,14 @@ export function SimpleOrb() {
   const { scrollYProgress } = useScroll();
   const isHomepage = location === "/";
   
-  // Mission section highlight (around 25-50% of scroll)
-  const missionOrbOpacity = useTransform(scrollYProgress, [0.2, 0.35, 0.5, 0.65], [0, 1, 1, 0]);
-  const missionOrbScale = useTransform(scrollYProgress, [0.2, 0.35, 0.5], [0.8, 1.8, 1.2]);
+  // Only render on homepage
+  if (!isHomepage) {
+    return null;
+  }
+  
+  // Mission section highlight (around 30-60% of scroll for better visibility)
+  const missionOrbOpacity = useTransform(scrollYProgress, [0.25, 0.4, 0.55, 0.7], [0, 0.9, 0.9, 0]);
+  const missionOrbScale = useTransform(scrollYProgress, [0.25, 0.4, 0.55], [0.5, 2, 1.5]);
 
   return (
     <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-10 overflow-hidden">
@@ -43,44 +48,42 @@ export function SimpleOrb() {
         }}
       />
 
-      {/* Mission section gradient orb - Homepage only */}
-      {isHomepage && (
+      {/* Mission section gradient orb */}
+      <motion.div
+        style={{
+          opacity: missionOrbOpacity,
+          scale: missionOrbScale,
+        }}
+        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0"
+      >
+        {/* Purple/Pink/Orange gradient */}
         <motion.div
-          style={{
-            opacity: missionOrbOpacity,
-            scale: missionOrbScale,
+          className="w-[500px] h-[500px] bg-gradient-to-br from-purple-500/70 via-pink-500/70 to-orange-500/70 rounded-full blur-3xl"
+          animate={{
+            rotate: [0, 360],
+            scale: [1, 1.2, 1],
           }}
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-        >
-          {/* Purple/Pink/Orange gradient */}
-          <motion.div
-            className="w-96 h-96 bg-gradient-to-br from-purple-400/60 via-pink-400/60 to-orange-400/60 rounded-full blur-3xl"
-            animate={{
-              rotate: [0, 360],
-              scale: [1, 1.1, 1],
-            }}
-            transition={{
-              duration: 12,
-              repeat: Infinity,
-              ease: "linear",
-            }}
-          />
-          
-          {/* Blue/Cyan/Teal gradient overlay */}
-          <motion.div
-            className="absolute inset-0 w-80 h-80 bg-gradient-to-br from-blue-300/50 via-cyan-300/50 to-teal-300/50 rounded-full blur-2xl top-8 left-8"
-            animate={{
-              rotate: [360, 0],
-              scale: [1.1, 1, 1.1],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "linear",
-            }}
-          />
-        </motion.div>
-      )}
+          transition={{
+            duration: 15,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        />
+        
+        {/* Blue/Cyan/Teal gradient overlay */}
+        <motion.div
+          className="absolute inset-0 w-[400px] h-[400px] bg-gradient-to-br from-blue-400/60 via-cyan-400/60 to-teal-400/60 rounded-full blur-2xl top-12 left-12"
+          animate={{
+            rotate: [360, 0],
+            scale: [1.2, 1, 1.2],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        />
+      </motion.div>
     </div>
   );
 }
