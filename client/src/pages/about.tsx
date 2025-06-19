@@ -103,8 +103,8 @@ export default function About() {
                   <h3 className="text-2xl font-medium text-black">Integrity</h3>
                 </div>
                 <p className="text-gray-600 leading-relaxed">
-                  Privacy-first AI, transparent practices, and ethical considerations guide every decision. 
-                  We build tools that respect users and their data.
+                  Privacy-first AI with transparent, ethical practices. We're committed to responsible 
+                  AI development that respects user privacy and promotes beneficial outcomes.
                 </p>
               </div>
             </FadeIn>
