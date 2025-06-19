@@ -15,15 +15,15 @@ export function SimpleOrb() {
   const missionOrbOpacity = useTransform(scrollYProgress, [0.15, 0.25, 0.45, 0.55], [0, 0.9, 0.9, 0]);
   const missionOrbScale = useTransform(scrollYProgress, [0.15, 0.25, 0.45], [0.3, 2.2, 1.8]);
   
-  // What Drives Us section - orb splits into four value orbs
-  const valuesOrbOpacity = useTransform(scrollYProgress, [0.55, 0.65, 0.85, 0.95], [0, 1, 1, 0]);
-  const valuesOrbScale = useTransform(scrollYProgress, [0.55, 0.65, 0.85], [0.5, 1, 0.8]);
+  // What Drives Us section - orb splits into four value orbs (ends before footer)
+  const valuesOrbOpacity = useTransform(scrollYProgress, [0.55, 0.65, 0.8, 0.85], [0, 1, 1, 0]);
+  const valuesOrbScale = useTransform(scrollYProgress, [0.55, 0.65, 0.8], [0.5, 1, 0.8]);
 
   return (
     <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-30 overflow-hidden">
-      {/* Main animated orb */}
+      {/* Main animated orb - starts near CTAs */}
       <motion.div
-        className="absolute top-80 right-20 w-40 h-40 bg-gradient-to-br from-purple-400 via-pink-300 to-orange-300 rounded-full blur-2xl opacity-60"
+        className="absolute bottom-80 right-20 w-40 h-40 bg-gradient-to-br from-purple-400 via-pink-300 to-orange-300 rounded-full blur-2xl opacity-60"
         animate={{
           y: [0, 30, 0],
           scale: [1, 1.1, 1],
@@ -38,7 +38,7 @@ export function SimpleOrb() {
       
       {/* Secondary orb */}
       <motion.div
-        className="absolute top-96 right-32 w-24 h-24 bg-gradient-to-br from-blue-300 via-cyan-200 to-teal-200 rounded-full blur-xl opacity-40"
+        className="absolute bottom-96 right-32 w-24 h-24 bg-gradient-to-br from-blue-300 via-cyan-200 to-teal-200 rounded-full blur-xl opacity-40"
         animate={{
           y: [0, -20, 0],
           scale: [1, 0.9, 1],
