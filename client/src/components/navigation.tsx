@@ -18,10 +18,11 @@ export function Navigation() {
   return (
     <nav className="bg-white border-b border-gray-100 sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-24">
           <div className="flex items-center">
-            <Link href="/" className="flex items-center hover:opacity-70 transition-all duration-300 hover:scale-105">
-              <img src={logoPath} alt="Aplica" className="h-12 w-auto" />
+            <Link href="/" className="flex items-center space-x-3 hover:opacity-70 transition-all duration-300 hover:scale-105">
+              <img src={logoPath} alt="Aplica" className="h-16 w-auto" />
+              <span className="text-2xl font-bold text-black">Aplica</span>
             </Link>
           </div>
           
