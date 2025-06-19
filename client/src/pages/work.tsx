@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { FadeIn } from "@/components/fade-in";
-import { Home, ShoppingCart, MapPin, Users } from "lucide-react";
+import { Home, MapPin, Users } from "lucide-react";
 
 export default function Work() {
   return (
@@ -18,58 +18,30 @@ export default function Work() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 mb-20">
-          {/* Real Estate AI */}
+          {/* Short Term Rental Tools */}
           <FadeIn delay={0.1}>
             <div className="floating-card bg-white/90 backdrop-blur-xl rounded-3xl p-10 shadow-2xl border border-gray-100/50">
               <img 
-                src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" 
-                alt="Modern apartment building" 
+                src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" 
+                alt="Modern short term rental property" 
                 className="w-full h-56 object-cover rounded-2xl mb-8"
               />
               <div className="flex items-center mb-6">
                 <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mr-6">
                   <Home className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-3xl font-bold text-slate-900">Real Estate Intelligence</h3>
+                <h3 className="text-3xl font-bold text-slate-900">Short Term Rental Intelligence</h3>
               </div>
               <p className="text-gray-600 mb-8 leading-relaxed text-lg">
-                AI agents that analyze property data, market trends, and personal preferences to help buyers and sellers make informed decisions faster.
+                AI-powered tools for short term rental hosts to optimize pricing, manage bookings, automate guest communication, and maximize revenue while maintaining exceptional guest experiences.
               </p>
               <div className="flex flex-wrap gap-3 mb-8">
-                <Badge variant="secondary" className="bg-blue-50 text-blue-700 hover:bg-blue-100 px-4 py-2 rounded-full font-medium">Market Analysis</Badge>
-                <Badge variant="secondary" className="bg-yellow-50 text-yellow-700 hover:bg-yellow-100 px-4 py-2 rounded-full font-medium">Price Prediction</Badge>
-                <Badge variant="secondary" className="bg-green-50 text-green-700 hover:bg-green-100 px-4 py-2 rounded-full font-medium">Location Insights</Badge>
+                <Badge variant="secondary" className="bg-blue-50 text-blue-700 hover:bg-blue-100 px-4 py-2 rounded-full font-medium">Dynamic Pricing</Badge>
+                <Badge variant="secondary" className="bg-yellow-50 text-yellow-700 hover:bg-yellow-100 px-4 py-2 rounded-full font-medium">Guest Automation</Badge>
+                <Badge variant="secondary" className="bg-green-50 text-green-700 hover:bg-green-100 px-4 py-2 rounded-full font-medium">Revenue Optimization</Badge>
               </div>
               <div className="text-gray-500 font-medium">
-                <strong className="text-slate-900">Status:</strong> Early Prototype • <strong className="text-slate-900">Launch:</strong> Q2 2024
-              </div>
-            </div>
-          </FadeIn>
-
-          {/* Smart Shopping */}
-          <FadeIn delay={0.2}>
-            <div className="floating-card bg-white/90 backdrop-blur-xl rounded-3xl p-10 shadow-2xl border border-gray-100/50">
-              <img 
-                src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" 
-                alt="Smart shopping with mobile device" 
-                className="w-full h-56 object-cover rounded-2xl mb-8"
-              />
-              <div className="flex items-center mb-6">
-                <div className="w-14 h-14 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-2xl flex items-center justify-center mr-6">
-                  <ShoppingCart className="w-7 h-7 text-white" />
-                </div>
-                <h3 className="text-3xl font-bold text-slate-900">Smart Shopping Assistant</h3>
-              </div>
-              <p className="text-gray-600 mb-8 leading-relaxed text-lg">
-                Personal AI that learns your preferences, compares options across platforms, and finds the best deals while respecting your values and budget.
-              </p>
-              <div className="flex flex-wrap gap-3 mb-8">
-                <Badge variant="secondary" className="bg-red-50 text-red-700 hover:bg-red-100 px-4 py-2 rounded-full font-medium">Price Tracking</Badge>
-                <Badge variant="secondary" className="bg-blue-50 text-blue-700 hover:bg-blue-100 px-4 py-2 rounded-full font-medium">Preference Learning</Badge>
-                <Badge variant="secondary" className="bg-yellow-50 text-yellow-700 hover:bg-yellow-100 px-4 py-2 rounded-full font-medium">Deal Discovery</Badge>
-              </div>
-              <div className="text-gray-500 font-medium">
-                <strong className="text-slate-900">Status:</strong> Research Phase • <strong className="text-slate-900">Launch:</strong> Q3 2024
+                <strong className="text-slate-900">Status:</strong> Early Prototype • <strong className="text-slate-900">Launch:</strong> Q2 2025
               </div>
             </div>
           </FadeIn>
@@ -97,7 +69,7 @@ export default function Work() {
                 <Badge variant="secondary" className="bg-blue-50 text-blue-700 hover:bg-blue-100 px-4 py-2 rounded-full font-medium">Dynamic Planning</Badge>
               </div>
               <div className="text-gray-500 font-medium">
-                <strong className="text-slate-900">Status:</strong> Concept Development • <strong className="text-slate-900">Launch:</strong> Q4 2024
+                <strong className="text-slate-900">Status:</strong> Concept Development • <strong className="text-slate-900">Launch:</strong> Q2 2026
               </div>
             </div>
           </FadeIn>
@@ -125,7 +97,7 @@ export default function Work() {
                 <Badge variant="secondary" className="bg-red-50 text-red-700 hover:bg-red-100 px-4 py-2 rounded-full font-medium">Availability Sync</Badge>
               </div>
               <div className="text-gray-500 font-medium">
-                <strong className="text-slate-900">Status:</strong> Early Testing • <strong className="text-slate-900">Launch:</strong> Q1 2025
+                <strong className="text-slate-900">Status:</strong> Early Testing • <strong className="text-slate-900">Launch:</strong> Q4 2025
               </div>
             </div>
           </FadeIn>
