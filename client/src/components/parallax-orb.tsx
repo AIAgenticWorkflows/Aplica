@@ -11,8 +11,13 @@ export function ParallaxOrb() {
   const heroOrbScale = useTransform(scrollYProgress, [0, 0.25], [1, 0.6]);
   const heroOrbOpacity = useTransform(scrollYProgress, [0, 0.2, 0.25], [0.8, 0.4, 0]);
   
-  // Mission section (0.25-0.5): Transform to geometric background pattern
-  const missionPatternOpacity = useTransform(scrollYProgress, [0.2, 0.3, 0.45, 0.55], [0, 0.8, 0.8, 0]);
+  // Mission section (0.25-0.5): Highlight mission with color transformation
+  const missionOrbOpacity = useTransform(scrollYProgress, [0.2, 0.3, 0.45, 0.55], [0, 1, 1, 0]);
+  const missionOrbScale = useTransform(scrollYProgress, [0.25, 0.35, 0.45], [0.8, 1.5, 1.2]);
+  const missionOrbY = useTransform(scrollYProgress, [0.25, 0.5], [-100, 100]);
+  
+  // Mission background pattern
+  const missionPatternOpacity = useTransform(scrollYProgress, [0.2, 0.3, 0.45, 0.55], [0, 0.6, 0.6, 0]);
   const missionPatternY = useTransform(scrollYProgress, [0.25, 0.5], [-50, 50]);
   
   // Values section (0.5-0.75): Four large orbs highlighting values
@@ -65,41 +70,102 @@ export function ParallaxOrb() {
         className="absolute top-32 right-32 w-24 h-24 bg-gradient-to-br from-blue-300 via-cyan-200 to-teal-200 rounded-full blur-xl"
       />
 
-      {/* Mission Section: Geometric Background Pattern - Homepage Only */}
+      {/* Mission Section: Enhanced Orb Highlighting - Homepage Only */}
       {isHomepage && (
-        <motion.div
-          style={{
-            opacity: missionPatternOpacity,
-            y: missionPatternY,
-          }}
-          className="absolute inset-0 flex items-center justify-center"
-        >
-          {/* Large background circles */}
-          <div className="absolute inset-0">
-            <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-gradient-to-br from-purple-200/20 to-blue-200/20 rounded-full blur-3xl" />
-            <div className="absolute bottom-1/3 right-1/4 w-48 h-48 bg-gradient-to-br from-pink-200/20 to-orange-200/20 rounded-full blur-3xl" />
-          </div>
-          
-          {/* Animated grid pattern */}
-          <div className="grid grid-cols-12 gap-6 opacity-20 w-full max-w-4xl">
-            {Array.from({ length: 48 }).map((_, i) => (
-              <motion.div
-                key={i}
-                className="w-2 h-2 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full"
-                animate={{
-                  scale: [0.8, 1.4, 0.8],
-                  opacity: [0.2, 0.8, 0.2],
-                }}
-                transition={{
-                  duration: 4,
-                  delay: i * 0.05,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-              />
-            ))}
-          </div>
-        </motion.div>
+        <>
+          {/* Mission-focused large orb */}
+          <motion.div
+            style={{
+              opacity: missionOrbOpacity,
+              scale: missionOrbScale,
+              y: missionOrbY,
+            }}
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+          >
+            <motion.div
+              className="w-80 h-80 bg-gradient-to-br from-blue-400/40 via-purple-400/40 to-pink-400/40 rounded-full blur-3xl"
+              animate={{
+                scale: [1, 1.1, 1],
+                rotate: [0, 180, 360],
+              }}
+              transition={{
+                duration: 8,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            />
+            <motion.div
+              className="absolute inset-0 w-60 h-60 bg-gradient-to-br from-cyan-300/30 via-blue-300/30 to-indigo-300/30 rounded-full blur-2xl top-10 left-10"
+              animate={{
+                scale: [1.1, 1, 1.1],
+                rotate: [360, 180, 0],
+              }}
+              transition={{
+                duration: 6,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            />
+          </motion.div>
+
+          {/* Mission text overlay effect */}
+          <motion.div
+            style={{
+              opacity: useTransform(missionOrbOpacity, [0, 1], [0, 0.8]),
+              scale: useTransform(missionOrbScale, [0.8, 1.5], [0.9, 1.1]),
+            }}
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center pointer-events-none"
+          >
+            <motion.div
+              className="text-6xl font-light text-white/20 select-none"
+              animate={{
+                opacity: [0.1, 0.3, 0.1],
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              Our Mission
+            </motion.div>
+          </motion.div>
+
+          {/* Background pattern */}
+          <motion.div
+            style={{
+              opacity: missionPatternOpacity,
+              y: missionPatternY,
+            }}
+            className="absolute inset-0 flex items-center justify-center"
+          >
+            {/* Subtle background circles */}
+            <div className="absolute inset-0">
+              <div className="absolute top-1/4 left-1/4 w-48 h-48 bg-gradient-to-br from-blue-200/10 to-purple-200/10 rounded-full blur-3xl" />
+              <div className="absolute bottom-1/4 right-1/4 w-32 h-32 bg-gradient-to-br from-pink-200/10 to-orange-200/10 rounded-full blur-3xl" />
+            </div>
+            
+            {/* Animated particles */}
+            <div className="grid grid-cols-16 gap-8 opacity-10 w-full max-w-6xl">
+              {Array.from({ length: 32 }).map((_, i) => (
+                <motion.div
+                  key={i}
+                  className="w-1 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"
+                  animate={{
+                    scale: [0.5, 1.5, 0.5],
+                    opacity: [0.1, 0.6, 0.1],
+                  }}
+                  transition={{
+                    duration: 3,
+                    delay: i * 0.1,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                />
+              ))}
+            </div>
+          </motion.div>
+        </>
       )}
 
       {/* Values Section: Four Prominent Orbs Highlighting Values - Homepage Only */}
