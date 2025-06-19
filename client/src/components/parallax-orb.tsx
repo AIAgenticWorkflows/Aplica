@@ -40,6 +40,7 @@ export function ParallaxOrb() {
   };
 
   const [currentTime, setCurrentTime] = useState(getCurrentTime());
+  const isHomepage = location === "/";
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -69,152 +70,156 @@ export function ParallaxOrb() {
         className="absolute top-32 right-32 w-24 h-24 bg-gradient-to-br from-blue-300 via-cyan-200 to-teal-200 rounded-full blur-xl"
       />
 
-      {/* Mission Section: Geometric Background Pattern */}
-      <motion.div
-        style={{
-          opacity: missionPatternOpacity,
-          y: missionPatternY,
-        }}
-        className="absolute inset-0 flex items-center justify-center"
-      >
-        {/* Large background circles */}
-        <div className="absolute inset-0">
-          <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-gradient-to-br from-purple-200/20 to-blue-200/20 rounded-full blur-3xl" />
-          <div className="absolute bottom-1/3 right-1/4 w-48 h-48 bg-gradient-to-br from-pink-200/20 to-orange-200/20 rounded-full blur-3xl" />
-        </div>
-        
-        {/* Animated grid pattern */}
-        <div className="grid grid-cols-12 gap-6 opacity-20 w-full max-w-4xl">
-          {Array.from({ length: 48 }).map((_, i) => (
+      {/* Mission Section: Geometric Background Pattern - Homepage Only */}
+      {isHomepage && (
+        <motion.div
+          style={{
+            opacity: missionPatternOpacity,
+            y: missionPatternY,
+          }}
+          className="absolute inset-0 flex items-center justify-center"
+        >
+          {/* Large background circles */}
+          <div className="absolute inset-0">
+            <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-gradient-to-br from-purple-200/20 to-blue-200/20 rounded-full blur-3xl" />
+            <div className="absolute bottom-1/3 right-1/4 w-48 h-48 bg-gradient-to-br from-pink-200/20 to-orange-200/20 rounded-full blur-3xl" />
+          </div>
+          
+          {/* Animated grid pattern */}
+          <div className="grid grid-cols-12 gap-6 opacity-20 w-full max-w-4xl">
+            {Array.from({ length: 48 }).map((_, i) => (
+              <motion.div
+                key={i}
+                className="w-2 h-2 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full"
+                animate={{
+                  scale: [0.8, 1.4, 0.8],
+                  opacity: [0.2, 0.8, 0.2],
+                }}
+                transition={{
+                  duration: 4,
+                  delay: i * 0.05,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              />
+            ))}
+          </div>
+        </motion.div>
+      )}
+
+      {/* Values Section: Four Prominent Orbs Highlighting Values - Homepage Only */}
+      {isHomepage && (
+        <motion.div
+          style={{
+            opacity: valuesDotsOpacity,
+            scale: valuesDotsScale,
+          }}
+          className="absolute inset-0"
+        >
+          {/* Simplicity - Top Left with label */}
+          <motion.div className="absolute top-1/4 left-1/6">
             <motion.div
-              key={i}
-              className="w-2 h-2 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full"
+              className="w-24 h-24 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full relative"
               animate={{
-                scale: [0.8, 1.4, 0.8],
-                opacity: [0.2, 0.8, 0.2],
+                scale: [1, 1.1, 1],
+                boxShadow: [
+                  "0 0 20px rgba(59, 130, 246, 0.3)",
+                  "0 0 40px rgba(59, 130, 246, 0.6)",
+                  "0 0 20px rgba(59, 130, 246, 0.3)"
+                ],
               }}
               transition={{
-                duration: 4,
-                delay: i * 0.05,
+                duration: 3,
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-            />
-          ))}
-        </div>
-      </motion.div>
-
-      {/* Values Section: Four Prominent Orbs Highlighting Values */}
-      <motion.div
-        style={{
-          opacity: valuesDotsOpacity,
-          scale: valuesDotsScale,
-        }}
-        className="absolute inset-0"
-      >
-        {/* Simplicity - Top Left with label */}
-        <motion.div className="absolute top-1/4 left-1/6">
-          <motion.div
-            className="w-24 h-24 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full relative"
-            animate={{
-              scale: [1, 1.1, 1],
-              boxShadow: [
-                "0 0 20px rgba(59, 130, 246, 0.3)",
-                "0 0 40px rgba(59, 130, 246, 0.6)",
-                "0 0 20px rgba(59, 130, 246, 0.3)"
-              ],
-            }}
-            transition={{
-              duration: 3,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          >
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-300/60 to-blue-500/60 rounded-full blur-lg" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-white font-bold text-sm">Simplicity</span>
-            </div>
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-300/60 to-blue-500/60 rounded-full blur-lg" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <span className="text-white font-bold text-sm">Simplicity</span>
+              </div>
+            </motion.div>
+          </motion.div>
+          
+          {/* Usefulness - Top Right with label */}
+          <motion.div className="absolute top-1/4 right-1/6">
+            <motion.div
+              className="w-24 h-24 bg-gradient-to-br from-green-400 to-green-600 rounded-full relative"
+              animate={{
+                scale: [1, 1.1, 1],
+                boxShadow: [
+                  "0 0 20px rgba(34, 197, 94, 0.3)",
+                  "0 0 40px rgba(34, 197, 94, 0.6)",
+                  "0 0 20px rgba(34, 197, 94, 0.3)"
+                ],
+              }}
+              transition={{
+                duration: 3,
+                delay: 0.75,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-green-300/60 to-green-500/60 rounded-full blur-lg" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <span className="text-white font-bold text-sm">Usefulness</span>
+              </div>
+            </motion.div>
+          </motion.div>
+          
+          {/* Curiosity - Bottom Left with label */}
+          <motion.div className="absolute bottom-1/4 left-1/6">
+            <motion.div
+              className="w-24 h-24 bg-gradient-to-br from-orange-400 to-red-500 rounded-full relative"
+              animate={{
+                scale: [1, 1.1, 1],
+                boxShadow: [
+                  "0 0 20px rgba(251, 146, 60, 0.3)",
+                  "0 0 40px rgba(251, 146, 60, 0.6)",
+                  "0 0 20px rgba(251, 146, 60, 0.3)"
+                ],
+              }}
+              transition={{
+                duration: 3,
+                delay: 1.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-orange-300/60 to-red-400/60 rounded-full blur-lg" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <span className="text-white font-bold text-sm">Curiosity</span>
+              </div>
+            </motion.div>
+          </motion.div>
+          
+          {/* Integrity - Bottom Right with label */}
+          <motion.div className="absolute bottom-1/4 right-1/6">
+            <motion.div
+              className="w-24 h-24 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full relative"
+              animate={{
+                scale: [1, 1.1, 1],
+                boxShadow: [
+                  "0 0 20px rgba(168, 85, 247, 0.3)",
+                  "0 0 40px rgba(168, 85, 247, 0.6)",
+                  "0 0 20px rgba(168, 85, 247, 0.3)"
+                ],
+              }}
+              transition={{
+                duration: 3,
+                delay: 2.25,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-300/60 to-pink-400/60 rounded-full blur-lg" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <span className="text-white font-bold text-sm">Integrity</span>
+              </div>
+            </motion.div>
           </motion.div>
         </motion.div>
-        
-        {/* Usefulness - Top Right with label */}
-        <motion.div className="absolute top-1/4 right-1/6">
-          <motion.div
-            className="w-24 h-24 bg-gradient-to-br from-green-400 to-green-600 rounded-full relative"
-            animate={{
-              scale: [1, 1.1, 1],
-              boxShadow: [
-                "0 0 20px rgba(34, 197, 94, 0.3)",
-                "0 0 40px rgba(34, 197, 94, 0.6)",
-                "0 0 20px rgba(34, 197, 94, 0.3)"
-              ],
-            }}
-            transition={{
-              duration: 3,
-              delay: 0.75,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          >
-            <div className="absolute inset-0 bg-gradient-to-br from-green-300/60 to-green-500/60 rounded-full blur-lg" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-white font-bold text-sm">Usefulness</span>
-            </div>
-          </motion.div>
-        </motion.div>
-        
-        {/* Curiosity - Bottom Left with label */}
-        <motion.div className="absolute bottom-1/4 left-1/6">
-          <motion.div
-            className="w-24 h-24 bg-gradient-to-br from-orange-400 to-red-500 rounded-full relative"
-            animate={{
-              scale: [1, 1.1, 1],
-              boxShadow: [
-                "0 0 20px rgba(251, 146, 60, 0.3)",
-                "0 0 40px rgba(251, 146, 60, 0.6)",
-                "0 0 20px rgba(251, 146, 60, 0.3)"
-              ],
-            }}
-            transition={{
-              duration: 3,
-              delay: 1.5,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          >
-            <div className="absolute inset-0 bg-gradient-to-br from-orange-300/60 to-red-400/60 rounded-full blur-lg" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-white font-bold text-sm">Curiosity</span>
-            </div>
-          </motion.div>
-        </motion.div>
-        
-        {/* Integrity - Bottom Right with label */}
-        <motion.div className="absolute bottom-1/4 right-1/6">
-          <motion.div
-            className="w-24 h-24 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full relative"
-            animate={{
-              scale: [1, 1.1, 1],
-              boxShadow: [
-                "0 0 20px rgba(168, 85, 247, 0.3)",
-                "0 0 40px rgba(168, 85, 247, 0.6)",
-                "0 0 20px rgba(168, 85, 247, 0.3)"
-              ],
-            }}
-            transition={{
-              duration: 3,
-              delay: 2.25,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          >
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-300/60 to-pink-400/60 rounded-full blur-lg" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-white font-bold text-sm">Integrity</span>
-            </div>
-          </motion.div>
-        </motion.div>
-      </motion.div>
+      )}
 
       {/* Footer Section: Time with Glow */}
       <motion.div
