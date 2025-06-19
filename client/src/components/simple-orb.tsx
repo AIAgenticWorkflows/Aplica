@@ -15,19 +15,19 @@ export function SimpleOrb() {
   const missionOrbOpacity = useTransform(scrollYProgress, [0.15, 0.25, 0.45, 0.55], [0, 0.9, 0.9, 0]);
   const missionOrbScale = useTransform(scrollYProgress, [0.15, 0.25, 0.45], [0.3, 2.2, 1.8]);
   
-  // What Drives Us section - orb splits into four value orbs (ends before footer)
-  const valuesOrbOpacity = useTransform(scrollYProgress, [0.55, 0.65, 0.8, 0.85], [0, 1, 1, 0]);
-  const valuesOrbScale = useTransform(scrollYProgress, [0.55, 0.65, 0.8], [0.5, 1, 0.8]);
+  // What Drives Us section - orb splits into four value orbs (ends well before footer)
+  const valuesOrbOpacity = useTransform(scrollYProgress, [0.55, 0.65, 0.75, 0.8], [0, 1, 1, 0]);
+  const valuesOrbScale = useTransform(scrollYProgress, [0.55, 0.65, 0.75], [0.5, 1, 0.8]);
 
   return (
     <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-30 overflow-hidden">
-      {/* Main animated orb - starts near CTAs */}
+      {/* Main animated orb - starts after CTA */}
       <motion.div
-        className="absolute bottom-80 right-20 w-40 h-40 bg-gradient-to-br from-purple-400 via-pink-300 to-orange-300 rounded-full blur-2xl opacity-60"
+        className="absolute bottom-60 right-20 w-40 h-40 bg-gradient-to-br from-purple-400 via-pink-300 to-orange-300 rounded-full blur-2xl opacity-30"
         animate={{
           y: [0, 30, 0],
           scale: [1, 1.1, 1],
-          opacity: [0.6, 0.8, 0.6],
+          opacity: [0.3, 0.5, 0.3],
         }}
         transition={{
           duration: 6,
@@ -38,11 +38,11 @@ export function SimpleOrb() {
       
       {/* Secondary orb */}
       <motion.div
-        className="absolute bottom-96 right-32 w-24 h-24 bg-gradient-to-br from-blue-300 via-cyan-200 to-teal-200 rounded-full blur-xl opacity-40"
+        className="absolute bottom-80 right-32 w-24 h-24 bg-gradient-to-br from-blue-300 via-cyan-200 to-teal-200 rounded-full blur-xl opacity-20"
         animate={{
           y: [0, -20, 0],
           scale: [1, 0.9, 1],
-          opacity: [0.4, 0.6, 0.4],
+          opacity: [0.2, 0.4, 0.2],
         }}
         transition={{
           duration: 4,
@@ -62,7 +62,7 @@ export function SimpleOrb() {
       >
         {/* Purple/Pink/Orange gradient */}
         <motion.div
-          className="w-[500px] h-[500px] bg-gradient-to-br from-purple-500/20 via-pink-500/20 to-orange-500/20 rounded-full blur-3xl"
+          className="w-[500px] h-[500px] bg-gradient-to-br from-purple-500/10 via-pink-500/10 to-orange-500/10 rounded-full blur-3xl"
           animate={{
             rotate: [0, 360],
             scale: [1, 1.2, 1],
@@ -76,7 +76,7 @@ export function SimpleOrb() {
         
         {/* Blue/Cyan/Teal gradient overlay */}
         <motion.div
-          className="absolute inset-0 w-[400px] h-[400px] bg-gradient-to-br from-blue-400/15 via-cyan-400/15 to-teal-400/15 rounded-full blur-2xl top-12 left-12"
+          className="absolute inset-0 w-[400px] h-[400px] bg-gradient-to-br from-blue-400/8 via-cyan-400/8 to-teal-400/8 rounded-full blur-2xl top-12 left-12"
           animate={{
             rotate: [360, 0],
             scale: [1.2, 1, 1.2],
@@ -99,10 +99,10 @@ export function SimpleOrb() {
       >
         {/* Simplicity - Top Left */}
         <motion.div
-          className="absolute top-1/4 left-1/6 w-32 h-32 bg-gradient-to-br from-blue-400/30 to-blue-600/30 rounded-full blur-2xl"
+          className="absolute top-1/4 left-1/6 w-32 h-32 bg-gradient-to-br from-blue-400/15 to-blue-600/15 rounded-full blur-2xl"
           animate={{
             scale: [1, 1.3, 1],
-            opacity: [0.3, 0.7, 0.3],
+            opacity: [0.15, 0.35, 0.15],
           }}
           transition={{
             duration: 4,
@@ -113,10 +113,10 @@ export function SimpleOrb() {
         
         {/* Usefulness - Top Right */}
         <motion.div
-          className="absolute top-1/4 right-1/6 w-32 h-32 bg-gradient-to-br from-green-400/30 to-green-600/30 rounded-full blur-2xl"
+          className="absolute top-1/4 right-1/6 w-32 h-32 bg-gradient-to-br from-green-400/15 to-green-600/15 rounded-full blur-2xl"
           animate={{
             scale: [1, 1.3, 1],
-            opacity: [0.3, 0.7, 0.3],
+            opacity: [0.15, 0.35, 0.15],
           }}
           transition={{
             duration: 4,
@@ -128,10 +128,10 @@ export function SimpleOrb() {
         
         {/* Curiosity - Bottom Left */}
         <motion.div
-          className="absolute bottom-1/4 left-1/6 w-32 h-32 bg-gradient-to-br from-orange-400/30 to-red-500/30 rounded-full blur-2xl"
+          className="absolute bottom-1/4 left-1/6 w-32 h-32 bg-gradient-to-br from-orange-400/15 to-red-500/15 rounded-full blur-2xl"
           animate={{
             scale: [1, 1.3, 1],
-            opacity: [0.3, 0.7, 0.3],
+            opacity: [0.15, 0.35, 0.15],
           }}
           transition={{
             duration: 4,
@@ -143,10 +143,10 @@ export function SimpleOrb() {
         
         {/* Integrity - Bottom Right */}
         <motion.div
-          className="absolute bottom-1/4 right-1/6 w-32 h-32 bg-gradient-to-br from-purple-400/30 to-pink-500/30 rounded-full blur-2xl"
+          className="absolute bottom-1/4 right-1/6 w-32 h-32 bg-gradient-to-br from-purple-400/15 to-pink-500/15 rounded-full blur-2xl"
           animate={{
             scale: [1, 1.3, 1],
-            opacity: [0.3, 0.7, 0.3],
+            opacity: [0.15, 0.35, 0.15],
           }}
           transition={{
             duration: 4,
