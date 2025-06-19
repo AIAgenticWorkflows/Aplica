@@ -58,7 +58,7 @@ export function SimpleOrb() {
       >
         {/* Purple/Pink/Orange gradient */}
         <motion.div
-          className="w-[500px] h-[500px] bg-gradient-to-br from-purple-500/70 via-pink-500/70 to-orange-500/70 rounded-full blur-3xl"
+          className="w-[500px] h-[500px] bg-gradient-to-br from-purple-500/20 via-pink-500/20 to-orange-500/20 rounded-full blur-3xl"
           animate={{
             rotate: [0, 360],
             scale: [1, 1.2, 1],
@@ -72,7 +72,7 @@ export function SimpleOrb() {
         
         {/* Blue/Cyan/Teal gradient overlay */}
         <motion.div
-          className="absolute inset-0 w-[400px] h-[400px] bg-gradient-to-br from-blue-400/60 via-cyan-400/60 to-teal-400/60 rounded-full blur-2xl top-12 left-12"
+          className="absolute inset-0 w-[400px] h-[400px] bg-gradient-to-br from-blue-400/15 via-cyan-400/15 to-teal-400/15 rounded-full blur-2xl top-12 left-12"
           animate={{
             rotate: [360, 0],
             scale: [1.2, 1, 1.2],
