@@ -11,7 +11,7 @@ export function SimpleOrb() {
   const missionOrbScale = useTransform(scrollYProgress, [0.2, 0.35, 0.5], [0.8, 1.8, 1.2]);
 
   return (
-    <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-0 overflow-hidden">
+    <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-10 overflow-hidden">
       {/* Main animated orb */}
       <motion.div
         className="absolute top-20 right-20 w-40 h-40 bg-gradient-to-br from-purple-400 via-pink-300 to-orange-300 rounded-full blur-2xl opacity-60"
@@ -54,7 +54,7 @@ export function SimpleOrb() {
         >
           {/* Purple/Pink/Orange gradient */}
           <motion.div
-            className="w-96 h-96 bg-gradient-to-br from-purple-400/30 via-pink-400/30 to-orange-400/30 rounded-full blur-3xl"
+            className="w-96 h-96 bg-gradient-to-br from-purple-400/60 via-pink-400/60 to-orange-400/60 rounded-full blur-3xl"
             animate={{
               rotate: [0, 360],
               scale: [1, 1.1, 1],
@@ -68,7 +68,7 @@ export function SimpleOrb() {
           
           {/* Blue/Cyan/Teal gradient overlay */}
           <motion.div
-            className="absolute inset-0 w-80 h-80 bg-gradient-to-br from-blue-300/25 via-cyan-300/25 to-teal-300/25 rounded-full blur-2xl top-8 left-8"
+            className="absolute inset-0 w-80 h-80 bg-gradient-to-br from-blue-300/50 via-cyan-300/50 to-teal-300/50 rounded-full blur-2xl top-8 left-8"
             animate={{
               rotate: [360, 0],
               scale: [1.1, 1, 1.1],

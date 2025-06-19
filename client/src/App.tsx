@@ -30,7 +30,7 @@ function App() {
       <TooltipProvider>
         <div className="min-h-screen bg-white relative">
           <SimpleOrb />
-          <div className="relative z-10">
+          <div className="relative z-20">
             <Navigation />
             <main>
               <Router />
