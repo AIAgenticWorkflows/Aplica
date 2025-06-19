@@ -6,11 +6,6 @@ export function SimpleOrb() {
   const { scrollYProgress } = useScroll();
   const isHomepage = location === "/";
   
-  // Only render on homepage
-  if (!isHomepage) {
-    return null;
-  }
-  
   // Mission section highlight - expand right at mission start
   const missionOrbOpacity = useTransform(scrollYProgress, [0.15, 0.25, 0.45, 0.55], [0, 0.9, 0.9, 0]);
   const missionOrbScale = useTransform(scrollYProgress, [0.15, 0.25, 0.45], [0.3, 2.2, 1.8]);
@@ -18,6 +13,10 @@ export function SimpleOrb() {
   // What Drives Us section - orb splits into four value orbs (ends before black nav area)
   const valuesOrbOpacity = useTransform(scrollYProgress, [0.55, 0.65, 0.7, 0.75], [0, 1, 1, 0]);
   const valuesOrbScale = useTransform(scrollYProgress, [0.55, 0.65, 0.7], [0.5, 1, 0.8]);
+
+  if (!isHomepage) {
+    return null;
+  }
 
   return (
     <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-30 overflow-hidden">
