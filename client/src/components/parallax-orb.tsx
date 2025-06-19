@@ -4,11 +4,6 @@ import { useLocation } from "wouter";
 
 export function ParallaxOrb() {
   const [location] = useLocation();
-  
-  // Only show on homepage
-  if (location !== "/") {
-    return null;
-  }
   const { scrollYProgress } = useScroll();
   
   // Hero section (0-0.25): Large colorful orb
@@ -51,7 +46,7 @@ export function ParallaxOrb() {
 
   return (
     <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-0 overflow-hidden">
-      {/* Hero Section: Large Animated Orb */}
+      {/* Hero Section: Large Animated Orb - Show on all pages */}
       <motion.div
         style={{
           y: heroOrbY,
