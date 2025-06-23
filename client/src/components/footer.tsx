@@ -14,7 +14,7 @@ export function Footer() {
               Thoughtful design, privacy-aware AI, and continuous learning.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">
+              <a href="https://www.linkedin.com/company/aplica-ltd/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors duration-300">
                 <Linkedin className="w-5 h-5" />
               </a>
             </div>
