@@ -40,7 +40,6 @@ export default function Work() {
               <div className="flex flex-wrap gap-2 mb-6">
                 <Badge variant="secondary" className="bg-gray-100 text-gray-700 hover:bg-gray-200 px-3 py-1 rounded-full text-sm transition-all duration-200 hover:scale-105">Professional Matching</Badge>
                 <Badge variant="secondary" className="bg-gray-100 text-gray-700 hover:bg-gray-200 px-3 py-1 rounded-full text-sm transition-all duration-200 hover:scale-105">Quality Scoring</Badge>
-                <Badge variant="secondary" className="bg-gray-100 text-gray-700 hover:bg-gray-200 px-3 py-1 rounded-full text-sm transition-all duration-200 hover:scale-105">Availability Sync</Badge>
               </div>
               <div className="text-sm text-gray-500">
                 <strong className="text-black">Status:</strong> Early Testing • <strong className="text-black">Launch:</strong> Q2 2025
@@ -65,9 +64,10 @@ export default function Work() {
                 <h3 className="text-2xl font-medium text-black">Short Term Rental Intelligence</h3>
               </div>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                AI-powered tools for short term rental hosts to maximize revenue while maintaining exceptional guest experiences.
+                AI-powered tools for short term rental hosts to optimize pricing, manage bookings, automate guest communication, and maximize revenue while maintaining exceptional guest experiences.
               </p>
               <div className="flex flex-wrap gap-2 mb-6">
+                <Badge variant="secondary" className="bg-gray-100 text-gray-700 hover:bg-gray-200 px-3 py-1 rounded-full text-sm transition-all duration-200 hover:scale-105">Dynamic Pricing</Badge>
                 <Badge variant="secondary" className="bg-gray-100 text-gray-700 hover:bg-gray-200 px-3 py-1 rounded-full text-sm transition-all duration-200 hover:scale-105">Guest Automation</Badge>
                 <Badge variant="secondary" className="bg-gray-100 text-gray-700 hover:bg-gray-200 px-3 py-1 rounded-full text-sm transition-all duration-200 hover:scale-105">Revenue Optimization</Badge>
               </div>
