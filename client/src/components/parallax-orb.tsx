@@ -58,7 +58,7 @@ export function ParallaxOrb() {
           scale: heroOrbScale,
           opacity: heroOrbOpacity,
         }}
-        className="absolute top-20 right-20 w-40 h-40 bg-gradient-to-br from-purple-400 via-pink-300 to-orange-300 rounded-full blur-2xl"
+        className="absolute top-20 right-10 md:right-20 w-24 h-24 md:w-40 md:h-40 bg-gradient-to-br from-purple-400 via-pink-300 to-orange-300 rounded-full blur-xl md:blur-2xl"
       />
       
       <motion.div
@@ -67,7 +67,7 @@ export function ParallaxOrb() {
           scale: useTransform(heroOrbScale, (value) => value * 0.7),
           opacity: useTransform(heroOrbOpacity, (value) => value * 0.6),
         }}
-        className="absolute top-32 right-32 w-24 h-24 bg-gradient-to-br from-blue-300 via-cyan-200 to-teal-200 rounded-full blur-xl"
+        className="absolute top-28 right-16 md:right-32 w-16 h-16 md:w-24 md:h-24 bg-gradient-to-br from-blue-300 via-cyan-200 to-teal-200 rounded-full blur-lg md:blur-xl"
       />
 
       {/* Mission Section: Enhanced Orb Highlighting - Homepage Only */}
