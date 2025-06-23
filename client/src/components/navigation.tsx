@@ -18,10 +18,10 @@ export function Navigation() {
   return (
     <nav className="bg-purple-700 border-b border-purple-800 sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
-        <div className="flex justify-between items-center h-28">
+        <div className="flex justify-between items-center h-32"> {/* Increased height */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center hover:opacity-70 transition-all duration-300 hover:scale-105">
-              <img src={logoPath} alt="Aplica" className="h-20 w-auto" />
+              <img src={logoPath} alt="Aplica" className="h-24 w-auto" /> {/* Increased logo height */}
             </Link>
           </div>
           
@@ -31,7 +31,7 @@ export function Navigation() {
               <Link
                 key={item.path}
                 href={item.path}
-                className={`text-sm font-medium transition-all duration-300 hover:scale-105 ${
+                className={`text-base font-medium transition-all duration-300 hover:scale-105 ${ /* Increased text size */
                   location === item.path
                     ? "text-white"
                     : "text-purple-200 hover:text-white"
