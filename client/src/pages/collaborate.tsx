@@ -286,25 +286,12 @@ export default function Collaborate() {
               <h3 className="text-2xl font-bold text-slate-800 mb-8">Prefer Another Way to Connect?</h3>
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <a
-                  href="mailto:hello@aplica.ai"
-                  className="flex items-center justify-center bg-white hover:bg-blue-50 border-2 border-gray-200 hover:border-blue-500 text-slate-800 px-6 py-3 rounded-lg transition-all duration-300"
-                >
-                  <Mail className="w-5 h-5 mr-3" />
-                  hello@aplica.ai
-                </a>
-                <a
-                  href="https://linkedin.com/company/aplica"
+                  href="https://www.linkedin.com/company/aplica-ltd/"
+                  target="_blank" rel="noopener noreferrer"
                   className="flex items-center justify-center bg-white hover:bg-blue-50 border-2 border-gray-200 hover:border-blue-500 text-slate-800 px-6 py-3 rounded-lg transition-all duration-300"
                 >
                   <Linkedin className="w-5 h-5 mr-3" />
                   LinkedIn
-                </a>
-                <a
-                  href="https://twitter.com/aplica_ai"
-                  className="flex items-center justify-center bg-white hover:bg-blue-50 border-2 border-gray-200 hover:border-blue-500 text-slate-800 px-6 py-3 rounded-lg transition-all duration-300"
-                >
-                  <Twitter className="w-5 h-5 mr-3" />
-                  Twitter
                 </a>
               </div>
             </div>
