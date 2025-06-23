@@ -149,6 +149,7 @@ export default function Collaborate() {
         </div>
 
         {/* Contact Form */}
+        {/*
         <FadeIn delay={0.4}>
           <Card>
             <CardContent className="p-12">
@@ -278,6 +279,7 @@ export default function Collaborate() {
             </CardContent>
           </Card>
         </FadeIn>
+        */}
 
         {/* Alternative Contact Methods */}
         <div className="mt-16">
