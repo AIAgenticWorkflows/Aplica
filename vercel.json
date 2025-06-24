@@ -17,10 +17,6 @@
     {
       "source": "/api/(.*)",
       "destination": "/server/index.ts"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/server/index.ts"
     }
   ]
 }
