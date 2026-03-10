@@ -3,10 +3,16 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { FadeIn } from "@/components/fade-in";
 import { Home, MapPin, Users } from "lucide-react";
+import { SEO } from "@/components/seo";
 
 export default function Work() {
   return (
     <section className="section-padding">
+      <SEO
+        title="Our Work"
+        description="Explore Aplica's AI-powered experiments and prototypes in real estate, travel planning, and service matchmaking."
+        canonical="https://aplica.co/work"
+      />
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
           <FadeIn>

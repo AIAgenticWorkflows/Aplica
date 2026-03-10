@@ -2,10 +2,16 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/fade-in";
 import { Zap, Target, Compass, ShieldCheck } from "lucide-react";
+import { SEO } from "@/components/seo";
 
 export default function About() {
   return (
     <section className="section-padding">
+      <SEO
+        title="About Us"
+        description="Learn about Aplica's mission to build thoughtful AI tools with a global mindset and local impact."
+        canonical="https://aplica.co/about"
+      />
       <div className="max-w-4xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
           <FadeIn>

@@ -2,10 +2,16 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/fade-in";
 import { Zap, Target, Compass, ShieldCheck } from "lucide-react";
+import { SEO } from "@/components/seo";
 
 export default function Home() {
   return (
     <div>
+      <SEO
+        title="AI-Powered Tools for Everyday Decisions"
+        description="Aplica designs AI-powered tools that make everyday decisions easier and smarter. Explore our experiments in real estate, shopping, and services."
+        canonical="https://aplica.co/"
+      />
       {/* Hero Section */}
       <section className="relative py-32 lg:py-40 overflow-hidden">
         <div className="absolute inset-0 hero-grid opacity-50 parallax-bg"></div>

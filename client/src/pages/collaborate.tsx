@@ -14,6 +14,7 @@ import { FadeIn } from "@/components/fade-in";
 import { Users, FlaskRound, Lightbulb, Mail, Linkedin, Twitter } from "lucide-react";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
+import { SEO } from "@/components/seo";
 
 const collaborationFormSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -98,6 +99,11 @@ export default function Collaborate() {
 
   return (
     <section className="section-padding">
+      <SEO
+        title="Collaborate With Us"
+        description="We're looking for early testers, partners, and collaborators. Start a conversation with Aplica today."
+        canonical="https://aplica.co/collaborate"
+      />
       <div className="max-w-4xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
           <FadeIn>
