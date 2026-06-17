@@ -9,10 +9,6 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <img src={logoPath} alt="Aplica" className="h-12 w-auto mb-6" />
-            <p className="text-gray-300 mb-4 leading-relaxed">
-              Building AI-powered tools that make everyday decisions easier and smarter. 
-              Thoughtful design, privacy-aware AI, and continuous learning.
-            </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">
                 <Linkedin className="w-5 h-5" />
