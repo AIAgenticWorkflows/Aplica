@@ -36,14 +36,6 @@ export default function Home() {
           </FadeIn>
         </div>
 
-        {/* Mission — flows directly beneath, same background */}
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center relative pb-32 lg:pb-40">
-          <FadeIn>
-            <p className="text-xl text-gray-500 leading-relaxed max-w-3xl mx-auto">
-              We're not here to chase trends.
-            </p>
-          </FadeIn>
-        </div>
       </section>
 
       {/* Values Preview */}
