@@ -57,7 +57,7 @@ export function Footer() {
           </div>
         </div>
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-          <p>&copy; 2025 Aplica. All rights reserved. Building the future of AI-assisted decision making.</p>
+          <p>&copy; 2026 Aplica. All rights reserved.</p>
         </div>
       </div>
     </footer>

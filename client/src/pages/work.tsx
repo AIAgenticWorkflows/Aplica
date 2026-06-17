@@ -43,7 +43,7 @@ export default function Work() {
                 <Badge variant="secondary" className="bg-gray-100 text-gray-700 hover:bg-gray-200 px-3 py-1 rounded-full text-sm transition-all duration-200 hover:scale-105">Availability Sync</Badge>
               </div>
               <div className="text-sm text-gray-500">
-                <strong className="text-black">Status:</strong> Early Testing • <strong className="text-black">Launch:</strong> Q2 2025
+                <strong className="text-black">Status:</strong> Early Testing • <strong className="text-black">Launch:</strong> Q1 2027
               </div>
             </div>
           </FadeIn>
@@ -73,7 +73,7 @@ export default function Work() {
                 <Badge variant="secondary" className="bg-gray-100 text-gray-700 hover:bg-gray-200 px-3 py-1 rounded-full text-sm transition-all duration-200 hover:scale-105">Revenue Optimization</Badge>
               </div>
               <div className="text-sm text-gray-500">
-                <strong className="text-black">Status:</strong> Early Prototype • <strong className="text-black">Launch:</strong> Q2 2025
+                <strong className="text-black">Status:</strong> Early Prototype • <strong className="text-black">Launch:</strong> Q2 2027
               </div>
             </div>
           </FadeIn>
@@ -103,7 +103,7 @@ export default function Work() {
                 <Badge variant="secondary" className="bg-gray-100 text-gray-700 hover:bg-gray-200 px-3 py-1 rounded-full text-sm transition-all duration-200 hover:scale-105">Dynamic Planning</Badge>
               </div>
               <div className="text-sm text-gray-500">
-                <strong className="text-black">Status:</strong> Concept Development • <strong className="text-black">Launch:</strong> Q2 2026
+                <strong className="text-black">Status:</strong> Concept Development • <strong className="text-black">Launch:</strong> Q3 2027
               </div>
             </div>
           </FadeIn>
