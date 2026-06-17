@@ -13,7 +13,7 @@ export default function Home() {
         {/* Hero */}
         <div className="max-w-6xl mx-auto px-6 lg:px-8 text-center relative pt-32 lg:pt-40 pb-20 lg:pb-24">
           <FadeIn direction="scale" delay={0.2}>
-            <h1 className="text-5xl lg:text-7xl font-light text-black mb-12 leading-tight text-balance">
+            <h1 className="text-5xl lg:text-7xl font-light text-slate-800 mb-12 leading-tight text-balance">
               AI tools for{" "}
               <span className="gradient-text font-medium">
                 everyday decisions
@@ -39,22 +39,8 @@ export default function Home() {
         {/* Mission — flows directly beneath, same background */}
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center relative pb-32 lg:pb-40">
           <FadeIn>
-            <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-              We're not here to chase trends. We build lean, experiment fast, and focus on solving problems that matter. 
-              Our goal is to turn promising ideas into reliable tools—backed by thoughtful design, privacy-aware AI, and continuous learning.
-            </p>
-          </FadeIn>
-        </div>
-      </section>
-
-      {/* Mission Statement (kept for scroll-trigger compatibility) */}
-      <section className="section-padding bg-gray-50 hidden">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <FadeIn>
-            <h2 className="text-4xl lg:text-5xl font-light text-black mb-8 text-balance">Our Mission</h2>
-            <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-              We're not here to chase trends. We build lean, experiment fast, and focus on solving problems that matter. 
-              Our goal is to turn promising ideas into reliable tools—backed by thoughtful design, privacy-aware AI, and continuous learning.
+            <p className="text-xl text-gray-500 leading-relaxed max-w-3xl mx-auto">
+              We're not here to chase trends.
             </p>
           </FadeIn>
         </div>
