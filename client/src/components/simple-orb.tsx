@@ -29,62 +29,91 @@ export function SimpleOrb() {
       style={{ opacity: masterOpacity }}
       className="fixed top-0 left-0 w-full h-full pointer-events-none z-30 overflow-hidden"
     >
-      {/* Hero orb — centred horizontally, starting just below the CTA buttons */}
+      {/* Hero orb — amber, centred just below the CTA buttons */}
       <motion.div
-        style={{ opacity: heroOrbOpacity, top: "60%", left: "50%", x: "-50%" }}
-        className="absolute w-72 h-72 bg-gradient-to-br from-purple-400 via-pink-300 to-orange-300 rounded-full blur-3xl opacity-30"
-        animate={{ y: [0, 28, 0], scale: [1, 1.12, 1] }}
-        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-      />
+        style={{ opacity: heroOrbOpacity, top: "58%", left: "50%", x: "-50%" }}
+        className="absolute w-[45rem] h-[45rem] rounded-full blur-[120px]"
+        animate={{ y: [0, -30, 0], scale: [1, 1.05, 1] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <div
+          className="w-full h-full rounded-full"
+          style={{ background: "radial-gradient(circle, #F59E0B 0%, transparent 70%)", opacity: 0.35 }}
+        />
+      </motion.div>
 
-      {/* Secondary hero orb */}
+      {/* Secondary hero orb — sand, bottom-right */}
       <motion.div
-        style={{ opacity: heroOrbOpacity, top: "54%", left: "62%" }}
-        className="absolute w-36 h-36 bg-gradient-to-br from-blue-300 via-cyan-200 to-teal-200 rounded-full blur-2xl opacity-20"
-        animate={{ y: [0, -18, 0], scale: [1, 0.9, 1] }}
-        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-      />
+        style={{ opacity: heroOrbOpacity, top: "52%", left: "62%" }}
+        className="absolute w-[40rem] h-[40rem] rounded-full blur-[100px]"
+        animate={{ y: [0, 40, 0], scale: [1, 1.1, 1] }}
+        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+      >
+        <div
+          className="w-full h-full rounded-full"
+          style={{ background: "radial-gradient(circle, #D4A96A 0%, transparent 70%)", opacity: 0.35 }}
+        />
+      </motion.div>
 
-      {/* Mission section gradient orb */}
+      {/* Warm cream accent orb */}
+      <motion.div
+        style={{ opacity: heroOrbOpacity, top: "45%", left: "28%" }}
+        className="absolute w-[35rem] h-[35rem] rounded-full blur-[90px]"
+        animate={{ x: [0, -30, 0], y: [0, 20, 0] }}
+        transition={{ duration: 9, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+      >
+        <div
+          className="w-full h-full rounded-full"
+          style={{ background: "radial-gradient(circle, #FEF3C7 0%, transparent 70%)", opacity: 0.55 }}
+        />
+      </motion.div>
+
+      {/* Mission section — warm amber gradient wash */}
       <motion.div
         style={{ opacity: missionOrbOpacity, scale: missionOrbScale }}
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
       >
         <motion.div
-          className="w-[500px] h-[500px] bg-gradient-to-br from-purple-500/10 via-pink-500/10 to-orange-500/10 rounded-full blur-3xl"
+          className="w-[500px] h-[500px] rounded-full blur-3xl"
+          style={{ background: "radial-gradient(circle, rgba(245,158,11,0.12) 0%, rgba(212,169,106,0.08) 50%, transparent 70%)" }}
           animate={{ rotate: [0, 360], scale: [1, 1.2, 1] }}
           transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
         />
         <motion.div
-          className="absolute w-[400px] h-[400px] bg-gradient-to-br from-blue-400/8 via-cyan-400/8 to-teal-400/8 rounded-full blur-2xl top-12 left-12"
+          className="absolute w-[400px] h-[400px] rounded-full blur-2xl top-12 left-12"
+          style={{ background: "radial-gradient(circle, rgba(254,243,199,0.15) 0%, transparent 70%)" }}
           animate={{ rotate: [360, 0], scale: [1.2, 1, 1.2] }}
           transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
         />
       </motion.div>
 
-      {/* What Drives Us — four value orbs */}
+      {/* What Drives Us — four warm-toned value orbs */}
       <motion.div
         style={{ opacity: valuesOrbOpacity, scale: valuesOrbScale }}
         className="absolute inset-0"
       >
         <motion.div
-          className="absolute top-1/4 left-1/6 w-32 h-32 bg-gradient-to-br from-blue-400/15 to-blue-600/15 rounded-full blur-2xl"
-          animate={{ scale: [1, 1.3, 1], opacity: [0.15, 0.35, 0.15] }}
+          className="absolute top-1/4 left-1/6 w-32 h-32 rounded-full blur-2xl"
+          style={{ background: "radial-gradient(circle, rgba(245,158,11,0.2) 0%, transparent 70%)" }}
+          animate={{ scale: [1, 1.3, 1], opacity: [0.2, 0.4, 0.2] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute top-1/4 right-1/6 w-32 h-32 bg-gradient-to-br from-green-400/15 to-green-600/15 rounded-full blur-2xl"
-          animate={{ scale: [1, 1.3, 1], opacity: [0.15, 0.35, 0.15] }}
+          className="absolute top-1/4 right-1/6 w-32 h-32 rounded-full blur-2xl"
+          style={{ background: "radial-gradient(circle, rgba(212,169,106,0.2) 0%, transparent 70%)" }}
+          animate={{ scale: [1, 1.3, 1], opacity: [0.2, 0.4, 0.2] }}
           transition={{ duration: 4, delay: 1, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute bottom-1/4 left-1/6 w-32 h-32 bg-gradient-to-br from-orange-400/15 to-red-500/15 rounded-full blur-2xl"
-          animate={{ scale: [1, 1.3, 1], opacity: [0.15, 0.35, 0.15] }}
+          className="absolute bottom-1/4 left-1/6 w-32 h-32 rounded-full blur-2xl"
+          style={{ background: "radial-gradient(circle, rgba(254,243,199,0.3) 0%, transparent 70%)" }}
+          animate={{ scale: [1, 1.3, 1], opacity: [0.2, 0.4, 0.2] }}
           transition={{ duration: 4, delay: 2, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute bottom-1/4 right-1/6 w-32 h-32 bg-gradient-to-br from-purple-400/15 to-pink-500/15 rounded-full blur-2xl"
-          animate={{ scale: [1, 1.3, 1], opacity: [0.15, 0.35, 0.15] }}
+          className="absolute bottom-1/4 right-1/6 w-32 h-32 rounded-full blur-2xl"
+          style={{ background: "radial-gradient(circle, rgba(180,130,80,0.2) 0%, transparent 70%)" }}
+          animate={{ scale: [1, 1.3, 1], opacity: [0.2, 0.4, 0.2] }}
           transition={{ duration: 4, delay: 3, repeat: Infinity, ease: "easeInOut" }}
         />
       </motion.div>

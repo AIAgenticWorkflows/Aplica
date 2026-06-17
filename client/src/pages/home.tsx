@@ -7,8 +7,8 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative py-32 lg:py-40 overflow-hidden">
-        <div className="absolute inset-0 hero-grid opacity-50 parallax-bg"></div>
+      <section className="relative py-32 lg:py-40 overflow-hidden bg-[#FAFAF9]">
+        <div className="absolute inset-0 hero-grid opacity-60 parallax-bg"></div>
         <div className="max-w-6xl mx-auto px-6 lg:px-8 text-center relative">
           <FadeIn direction="scale" delay={0.2}>
             <h1 className="text-5xl lg:text-7xl font-light text-black mb-8 leading-tight text-balance">
