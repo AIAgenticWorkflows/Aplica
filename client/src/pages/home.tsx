@@ -6,26 +6,21 @@ import { Zap, Target, Compass, ShieldCheck } from "lucide-react";
 export default function Home() {
   return (
     <div>
-      {/* Hero Section */}
-      <section className="relative py-32 lg:py-40 overflow-hidden bg-[#FAFAF9]">
+      {/* Hero + Mission — one continuous section */}
+      <section className="relative overflow-hidden bg-[#FAFAF9]">
         <div className="absolute inset-0 hero-grid opacity-60 parallax-bg"></div>
-        <div className="max-w-6xl mx-auto px-6 lg:px-8 text-center relative">
+
+        {/* Hero */}
+        <div className="max-w-6xl mx-auto px-6 lg:px-8 text-center relative pt-32 lg:pt-40 pb-20 lg:pb-24">
           <FadeIn direction="scale" delay={0.2}>
-            <h1 className="text-5xl lg:text-7xl font-light text-black mb-8 leading-tight text-balance">
-              AI-Powered Tools for{" "}
+            <h1 className="text-5xl lg:text-7xl font-light text-black mb-12 leading-tight text-balance">
+              AI tools for{" "}
               <span className="gradient-text font-medium">
-                Everyday Decisions
+                everyday decisions
               </span>
             </h1>
           </FadeIn>
-          <FadeIn delay={0.4}>
-            <p className="text-xl lg:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
-              We design thoughtful AI tools that make decisions easier and smarter. 
-              Starting with short term rentals, travel, and services—building lean, 
-              experimenting fast, and solving problems that matter.
-            </p>
-          </FadeIn>
-          <FadeIn delay={0.6} direction="up">
+          <FadeIn delay={0.4} direction="up">
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/work">
                 <Button size="lg" className="px-8 py-4 text-base font-medium bg-black text-white hover:bg-gray-800 transition-all duration-300 rounded-full smooth-bounce">
@@ -40,10 +35,20 @@ export default function Home() {
             </div>
           </FadeIn>
         </div>
+
+        {/* Mission — flows directly beneath, same background */}
+        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center relative pb-32 lg:pb-40">
+          <FadeIn>
+            <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+              We're not here to chase trends. We build lean, experiment fast, and focus on solving problems that matter. 
+              Our goal is to turn promising ideas into reliable tools—backed by thoughtful design, privacy-aware AI, and continuous learning.
+            </p>
+          </FadeIn>
+        </div>
       </section>
 
-      {/* Mission Statement */}
-      <section className="section-padding bg-gray-50">
+      {/* Mission Statement (kept for scroll-trigger compatibility) */}
+      <section className="section-padding bg-gray-50 hidden">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <FadeIn>
             <h2 className="text-4xl lg:text-5xl font-light text-black mb-8 text-balance">Our Mission</h2>
